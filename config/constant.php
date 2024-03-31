@@ -1,0 +1,42 @@
+<?php
+
+return [
+    'meta_tag_post_id' => '<meta name="post-id" content="%s">',
+    'route_news_detail' => 'news.detail',
+    'max_number_of_page' => 200,
+    'themes_without_footer_config_group' => [
+        'download',
+        'kho-sim-so-dep',
+        'maxiturky',
+        'mua-sim',
+        'netqin',
+        'phplx',
+        'qmobile',
+        'sieu-thi-sim-the',
+        'sim-dan-tri',
+        'sim-dat-viet',
+        'sim-gia-goc',
+        'sim-mobifone',
+        'sim-so-cuc-re',
+        'sim365',
+        'sms-trieu-niem-vui',
+        'the-gioi-sim-card',
+        'tin-tuc-kho-sim',
+        //  'top-sim',
+        'vegafone',
+        'vienthongbaomoi',
+        // 'xalo',
+        'omotet',
+        'tintucsimso',
+        'jhpress',
+        'tinsimdep',
+        'sansimdep',
+        'download',
+        'download2',
+    ],
+    'post_status' => [
+        'publish' => 'publish',
+        'draft' => 'draft',
+        'trash' => 'trash',
+    ]
+];

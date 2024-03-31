@@ -1,0 +1,18 @@
+{
+  "name": "sun10",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "node-sass --watch assets/scss -o assets/css"
+  },
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  },
+  "author": "",
+  "license": "ISC"
+}
