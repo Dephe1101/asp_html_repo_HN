@@ -46,19 +46,46 @@ header {
   @media (max-width: 810px) {
     header .navbar-brand-hide {
       display: block !important; } }
-  header .nav-main .nav-item {
-    display: flex;
-    align-items: center; }
-    header .nav-main .nav-item .nav-link {
-      text-transform: uppercase;
-      color: #333333;
-      font-weight: 600;
-      text-decoration: none; }
-      header .nav-main .nav-item .nav-link:hover {
-        color: #da2028; }
-  header .nav-main .dropdown-menu {
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
-    border: none; }
+  header #navbarNav .nav-main {
+    position: relative; }
+    header #navbarNav .nav-main .nav-item {
+      display: flex;
+      align-items: center; }
+      header #navbarNav .nav-main .nav-item .nav-link {
+        text-transform: uppercase;
+        color: #333333;
+        font-weight: 600;
+        text-decoration: none; }
+        header #navbarNav .nav-main .nav-item .nav-link:hover {
+          color: #da2028; }
+      header #navbarNav .nav-main .nav-item .btn_search_mobile_top {
+        color: #fff;
+        padding: 0 0 0 7px;
+        border: none;
+        -webkit-appearance: button;
+        cursor: pointer; }
+        header #navbarNav .nav-main .nav-item .btn_search_mobile_top i {
+          background: #078844;
+          padding: 5px; }
+      header #navbarNav .nav-main .nav-item .search {
+        display: none;
+        padding-top: 22px;
+        width: 300px;
+        position: absolute;
+        right: 0;
+        top: 33px;
+        z-index: 99999; }
+        header #navbarNav .nav-main .nav-item .search .search-form .btn_search {
+          position: absolute;
+          top: 22px;
+          right: 0;
+          border: none;
+          background: green;
+          color: #fff;
+          padding: 5px 20px; }
+    header #navbarNav .nav-main .dropdown-menu {
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+      border: none; }
 
 #slider-main .carousel-control-next-icon,
 #slider-main .carousel-control-prev-icon {
@@ -80,78 +107,87 @@ section {
 .bg-gray {
   background-color: #f0efef; }
 
-#cong-trinh-tieu-bieu img,
-#xay-dung-nha img,
-#sua-chua-nha img,
-#nang-cap-nha img,
-#thiet-ke-kien-truc-nha img,
-#vat-lieu-hoan-thien img,
-#cam-nang-xay-nha img,
-#tinh-chi-phi-xay-dung img,
-#hoat-dong img,
-#danh-gia img,
-#bang-bao-gia img,
-#cam-ket img {
-  max-width: 100%; }
-
-#cong-trinh-tieu-bieu .title-heading h2,
-#xay-dung-nha .title-heading h2,
-#sua-chua-nha .title-heading h2,
-#nang-cap-nha .title-heading h2,
-#thiet-ke-kien-truc-nha .title-heading h2,
-#vat-lieu-hoan-thien .title-heading h2,
-#cam-nang-xay-nha .title-heading h2,
-#tinh-chi-phi-xay-dung .title-heading h2,
-#hoat-dong .title-heading h2,
-#danh-gia .title-heading h2,
-#bang-bao-gia .title-heading h2,
-#cam-ket .title-heading h2 {
-  text-transform: uppercase;
-  font-family: "Roboto Condensed";
-  font-size: 24px;
-  position: relative;
-  margin-bottom: 10px;
-  font-weight: 500;
-  text-align: center;
-  padding-bottom: 0;
-  color: #1b4a1c;
-  position: relative;
-  margin-top: 0;
-  text-align: center; }
-
-#cong-trinh-tieu-bieu .title-heading .line_f,
-#xay-dung-nha .title-heading .line_f,
-#sua-chua-nha .title-heading .line_f,
-#nang-cap-nha .title-heading .line_f,
-#thiet-ke-kien-truc-nha .title-heading .line_f,
-#vat-lieu-hoan-thien .title-heading .line_f,
-#cam-nang-xay-nha .title-heading .line_f,
-#tinh-chi-phi-xay-dung .title-heading .line_f,
-#hoat-dong .title-heading .line_f,
-#danh-gia .title-heading .line_f,
-#bang-bao-gia .title-heading .line_f,
-#cam-ket .title-heading .line_f {
-  height: 2px;
-  width: 200px;
-  margin: 0 auto 5px;
-  background: #1b4a1c; }
-
-#cong-trinh-tieu-bieu .single-project .item,
-#xay-dung-nha .single-project .item,
-#sua-chua-nha .single-project .item,
-#nang-cap-nha .single-project .item,
-#thiet-ke-kien-truc-nha .single-project .item,
-#vat-lieu-hoan-thien .single-project .item,
-#cam-nang-xay-nha .single-project .item,
-#tinh-chi-phi-xay-dung .single-project .item,
-#hoat-dong .single-project .item,
-#danh-gia .single-project .item,
-#bang-bao-gia .single-project .item,
-#cam-ket .single-project .item {
-  border: 1px solid #ddd;
-  word-wrap: break-word;
-  list-style: none; }
-  @media (min-width: 1023px) {
+#cong-trinh-tieu-bieu,
+#xay-dung-nha,
+#sua-chua-nha,
+#nang-cap-nha,
+#thiet-ke-kien-truc-nha,
+#vat-lieu-hoan-thien,
+#cam-nang-xay-nha,
+#tinh-chi-phi-xay-dung,
+#hoat-dong,
+#danh-gia,
+#bang-bao-gia,
+#cam-ket {
+  font-family: "Roboto Condensed"; }
+  #cong-trinh-tieu-bieu img,
+  #xay-dung-nha img,
+  #sua-chua-nha img,
+  #nang-cap-nha img,
+  #thiet-ke-kien-truc-nha img,
+  #vat-lieu-hoan-thien img,
+  #cam-nang-xay-nha img,
+  #tinh-chi-phi-xay-dung img,
+  #hoat-dong img,
+  #danh-gia img,
+  #bang-bao-gia img,
+  #cam-ket img {
+    max-width: 100%; }
+  #cong-trinh-tieu-bieu .title-heading h2,
+  #xay-dung-nha .title-heading h2,
+  #sua-chua-nha .title-heading h2,
+  #nang-cap-nha .title-heading h2,
+  #thiet-ke-kien-truc-nha .title-heading h2,
+  #vat-lieu-hoan-thien .title-heading h2,
+  #cam-nang-xay-nha .title-heading h2,
+  #tinh-chi-phi-xay-dung .title-heading h2,
+  #hoat-dong .title-heading h2,
+  #danh-gia .title-heading h2,
+  #bang-bao-gia .title-heading h2,
+  #cam-ket .title-heading h2 {
+    text-transform: uppercase;
+    font-family: "Roboto Condensed";
+    font-size: 24px;
+    position: relative;
+    margin-bottom: 10px;
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 0;
+    color: #1b4a1c;
+    position: relative;
+    margin-top: 0;
+    text-align: center; }
+  #cong-trinh-tieu-bieu .title-heading .line_f,
+  #xay-dung-nha .title-heading .line_f,
+  #sua-chua-nha .title-heading .line_f,
+  #nang-cap-nha .title-heading .line_f,
+  #thiet-ke-kien-truc-nha .title-heading .line_f,
+  #vat-lieu-hoan-thien .title-heading .line_f,
+  #cam-nang-xay-nha .title-heading .line_f,
+  #tinh-chi-phi-xay-dung .title-heading .line_f,
+  #hoat-dong .title-heading .line_f,
+  #danh-gia .title-heading .line_f,
+  #bang-bao-gia .title-heading .line_f,
+  #cam-ket .title-heading .line_f {
+    height: 2px;
+    width: 200px;
+    margin: 0 auto 5px;
+    background: #1b4a1c; }
+  #cong-trinh-tieu-bieu .single-project .item,
+  #xay-dung-nha .single-project .item,
+  #sua-chua-nha .single-project .item,
+  #nang-cap-nha .single-project .item,
+  #thiet-ke-kien-truc-nha .single-project .item,
+  #vat-lieu-hoan-thien .single-project .item,
+  #cam-nang-xay-nha .single-project .item,
+  #tinh-chi-phi-xay-dung .single-project .item,
+  #hoat-dong .single-project .item,
+  #danh-gia .single-project .item,
+  #bang-bao-gia .single-project .item,
+  #cam-ket .single-project .item {
+    border: 1px solid #ddd;
+    word-wrap: break-word;
+    list-style: none; }
     #cong-trinh-tieu-bieu .single-project .item .img,
     #xay-dung-nha .single-project .item .img,
     #sua-chua-nha .single-project .item .img,
@@ -164,80 +200,183 @@ section {
     #danh-gia .single-project .item .img,
     #bang-bao-gia .single-project .item .img,
     #cam-ket .single-project .item .img {
-      overflow: hidden;
-      height: 185px; }
-    #cong-trinh-tieu-bieu .single-project .item img,
-    #xay-dung-nha .single-project .item img,
-    #sua-chua-nha .single-project .item img,
-    #nang-cap-nha .single-project .item img,
-    #thiet-ke-kien-truc-nha .single-project .item img,
-    #vat-lieu-hoan-thien .single-project .item img,
-    #cam-nang-xay-nha .single-project .item img,
-    #tinh-chi-phi-xay-dung .single-project .item img,
-    #hoat-dong .single-project .item img,
-    #danh-gia .single-project .item img,
-    #bang-bao-gia .single-project .item img,
-    #cam-ket .single-project .item img {
-      max-width: 100%;
-      height: auto;
-      -webkit-transform: scale(1);
-      transform: scale(1);
-      -webkit-transition: 0.3s ease-in-out;
-      transition: 0.3s ease-in-out; }
-      #cong-trinh-tieu-bieu .single-project .item img:hover,
-      #xay-dung-nha .single-project .item img:hover,
-      #sua-chua-nha .single-project .item img:hover,
-      #nang-cap-nha .single-project .item img:hover,
-      #thiet-ke-kien-truc-nha .single-project .item img:hover,
-      #vat-lieu-hoan-thien .single-project .item img:hover,
-      #cam-nang-xay-nha .single-project .item img:hover,
-      #tinh-chi-phi-xay-dung .single-project .item img:hover,
-      #hoat-dong .single-project .item img:hover,
-      #danh-gia .single-project .item img:hover,
-      #bang-bao-gia .single-project .item img:hover,
-      #cam-ket .single-project .item img:hover {
+      position: relative;
+      overflow: hidden; }
+      #cong-trinh-tieu-bieu .single-project .item .img .link,
+      #xay-dung-nha .single-project .item .img .link,
+      #sua-chua-nha .single-project .item .img .link,
+      #nang-cap-nha .single-project .item .img .link,
+      #thiet-ke-kien-truc-nha .single-project .item .img .link,
+      #vat-lieu-hoan-thien .single-project .item .img .link,
+      #cam-nang-xay-nha .single-project .item .img .link,
+      #tinh-chi-phi-xay-dung .single-project .item .img .link,
+      #hoat-dong .single-project .item .img .link,
+      #danh-gia .single-project .item .img .link,
+      #bang-bao-gia .single-project .item .img .link,
+      #cam-ket .single-project .item .img .link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 128, 0, 0.8);
+        overflow: hidden;
+        opacity: 0;
+        -webkit-transition: all 0.4s ease;
+        -moz-transition: all 0.4s ease;
+        -ms-transition: all 0.4s ease;
+        transition: all 0.4s ease; }
+        #cong-trinh-tieu-bieu .single-project .item .img .link i,
+        #xay-dung-nha .single-project .item .img .link i,
+        #sua-chua-nha .single-project .item .img .link i,
+        #nang-cap-nha .single-project .item .img .link i,
+        #thiet-ke-kien-truc-nha .single-project .item .img .link i,
+        #vat-lieu-hoan-thien .single-project .item .img .link i,
+        #cam-nang-xay-nha .single-project .item .img .link i,
+        #tinh-chi-phi-xay-dung .single-project .item .img .link i,
+        #hoat-dong .single-project .item .img .link i,
+        #danh-gia .single-project .item .img .link i,
+        #bang-bao-gia .single-project .item .img .link i,
+        #cam-ket .single-project .item .img .link i {
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 50px;
+          height: 50px;
+          line-height: 46px;
+          font-size: 1.3em;
+          border: 2px solid #fff;
+          color: #fff;
+          text-align: center;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          border-radius: 50%;
+          -webkit-transform: translate(-50%, -50%) rotate(270deg);
+          -moz-transform: translate(-50%, -50%) rotate(270deg);
+          -ms-transform: translate(-50%, -50%) rotate(270deg);
+          transform: translate(-50%, -50%) rotate(270deg);
+          -webkit-transition: all 0.4s ease;
+          -moz-transition: all 0.4s ease;
+          -ms-transition: all 0.4s ease;
+          transition: all 0.4s ease; }
+      #cong-trinh-tieu-bieu .single-project .item .img img,
+      #xay-dung-nha .single-project .item .img img,
+      #sua-chua-nha .single-project .item .img img,
+      #nang-cap-nha .single-project .item .img img,
+      #thiet-ke-kien-truc-nha .single-project .item .img img,
+      #vat-lieu-hoan-thien .single-project .item .img img,
+      #cam-nang-xay-nha .single-project .item .img img,
+      #tinh-chi-phi-xay-dung .single-project .item .img img,
+      #hoat-dong .single-project .item .img img,
+      #danh-gia .single-project .item .img img,
+      #bang-bao-gia .single-project .item .img img,
+      #cam-ket .single-project .item .img img {
+        max-width: 100%;
+        height: auto;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out; }
+      #cong-trinh-tieu-bieu .single-project .item .img:hover img,
+      #xay-dung-nha .single-project .item .img:hover img,
+      #sua-chua-nha .single-project .item .img:hover img,
+      #nang-cap-nha .single-project .item .img:hover img,
+      #thiet-ke-kien-truc-nha .single-project .item .img:hover img,
+      #vat-lieu-hoan-thien .single-project .item .img:hover img,
+      #cam-nang-xay-nha .single-project .item .img:hover img,
+      #tinh-chi-phi-xay-dung .single-project .item .img:hover img,
+      #hoat-dong .single-project .item .img:hover img,
+      #danh-gia .single-project .item .img:hover img,
+      #bang-bao-gia .single-project .item .img:hover img,
+      #cam-ket .single-project .item .img:hover img {
         -webkit-transform: scale(1.3);
-        transform: scale(1.3); } }
-  #cong-trinh-tieu-bieu .single-project .item .video-view,
-  #xay-dung-nha .single-project .item .video-view,
-  #sua-chua-nha .single-project .item .video-view,
-  #nang-cap-nha .single-project .item .video-view,
-  #thiet-ke-kien-truc-nha .single-project .item .video-view,
-  #vat-lieu-hoan-thien .single-project .item .video-view,
-  #cam-nang-xay-nha .single-project .item .video-view,
-  #tinh-chi-phi-xay-dung .single-project .item .video-view,
-  #hoat-dong .single-project .item .video-view,
-  #danh-gia .single-project .item .video-view,
-  #bang-bao-gia .single-project .item .video-view,
-  #cam-ket .single-project .item .video-view {
+        transform: scale(1.3); }
+      #cong-trinh-tieu-bieu .single-project .item .img:hover .link,
+      #xay-dung-nha .single-project .item .img:hover .link,
+      #sua-chua-nha .single-project .item .img:hover .link,
+      #nang-cap-nha .single-project .item .img:hover .link,
+      #thiet-ke-kien-truc-nha .single-project .item .img:hover .link,
+      #vat-lieu-hoan-thien .single-project .item .img:hover .link,
+      #cam-nang-xay-nha .single-project .item .img:hover .link,
+      #tinh-chi-phi-xay-dung .single-project .item .img:hover .link,
+      #hoat-dong .single-project .item .img:hover .link,
+      #danh-gia .single-project .item .img:hover .link,
+      #bang-bao-gia .single-project .item .img:hover .link,
+      #cam-ket .single-project .item .img:hover .link {
+        opacity: 1; }
+        #cong-trinh-tieu-bieu .single-project .item .img:hover .link i,
+        #xay-dung-nha .single-project .item .img:hover .link i,
+        #sua-chua-nha .single-project .item .img:hover .link i,
+        #nang-cap-nha .single-project .item .img:hover .link i,
+        #thiet-ke-kien-truc-nha .single-project .item .img:hover .link i,
+        #vat-lieu-hoan-thien .single-project .item .img:hover .link i,
+        #cam-nang-xay-nha .single-project .item .img:hover .link i,
+        #tinh-chi-phi-xay-dung .single-project .item .img:hover .link i,
+        #hoat-dong .single-project .item .img:hover .link i,
+        #danh-gia .single-project .item .img:hover .link i,
+        #bang-bao-gia .single-project .item .img:hover .link i,
+        #cam-ket .single-project .item .img:hover .link i {
+          -webkit-transform: translate(-50%, -50%) rotate(0);
+          -moz-transform: translate(-50%, -50%) rotate(0);
+          -ms-transform: translate(-50%, -50%) rotate(0);
+          transform: translate(-50%, -50%) rotate(0); }
+    @media (min-width: 1023px) {
+      #cong-trinh-tieu-bieu .single-project .item .img,
+      #xay-dung-nha .single-project .item .img,
+      #sua-chua-nha .single-project .item .img,
+      #nang-cap-nha .single-project .item .img,
+      #thiet-ke-kien-truc-nha .single-project .item .img,
+      #vat-lieu-hoan-thien .single-project .item .img,
+      #cam-nang-xay-nha .single-project .item .img,
+      #tinh-chi-phi-xay-dung .single-project .item .img,
+      #hoat-dong .single-project .item .img,
+      #danh-gia .single-project .item .img,
+      #bang-bao-gia .single-project .item .img,
+      #cam-ket .single-project .item .img {
+        overflow: hidden;
+        height: 185px; } }
+  #cong-trinh-tieu-bieu .single-project .video-view,
+  #xay-dung-nha .single-project .video-view,
+  #sua-chua-nha .single-project .video-view,
+  #nang-cap-nha .single-project .video-view,
+  #thiet-ke-kien-truc-nha .single-project .video-view,
+  #vat-lieu-hoan-thien .single-project .video-view,
+  #cam-nang-xay-nha .single-project .video-view,
+  #tinh-chi-phi-xay-dung .single-project .video-view,
+  #hoat-dong .single-project .video-view,
+  #danh-gia .single-project .video-view,
+  #bang-bao-gia .single-project .video-view,
+  #cam-ket .single-project .video-view {
     position: relative;
     cursor: pointer;
     padding: 10px; }
-    #cong-trinh-tieu-bieu .single-project .item .video-view img,
-    #xay-dung-nha .single-project .item .video-view img,
-    #sua-chua-nha .single-project .item .video-view img,
-    #nang-cap-nha .single-project .item .video-view img,
-    #thiet-ke-kien-truc-nha .single-project .item .video-view img,
-    #vat-lieu-hoan-thien .single-project .item .video-view img,
-    #cam-nang-xay-nha .single-project .item .video-view img,
-    #tinh-chi-phi-xay-dung .single-project .item .video-view img,
-    #hoat-dong .single-project .item .video-view img,
-    #danh-gia .single-project .item .video-view img,
-    #bang-bao-gia .single-project .item .video-view img,
-    #cam-ket .single-project .item .video-view img {
+    #cong-trinh-tieu-bieu .single-project .video-view img,
+    #xay-dung-nha .single-project .video-view img,
+    #sua-chua-nha .single-project .video-view img,
+    #nang-cap-nha .single-project .video-view img,
+    #thiet-ke-kien-truc-nha .single-project .video-view img,
+    #vat-lieu-hoan-thien .single-project .video-view img,
+    #cam-nang-xay-nha .single-project .video-view img,
+    #tinh-chi-phi-xay-dung .single-project .video-view img,
+    #hoat-dong .single-project .video-view img,
+    #danh-gia .single-project .video-view img,
+    #bang-bao-gia .single-project .video-view img,
+    #cam-ket .single-project .video-view img {
       max-width: 100%; }
-    #cong-trinh-tieu-bieu .single-project .item .video-view .play-video-icon,
-    #xay-dung-nha .single-project .item .video-view .play-video-icon,
-    #sua-chua-nha .single-project .item .video-view .play-video-icon,
-    #nang-cap-nha .single-project .item .video-view .play-video-icon,
-    #thiet-ke-kien-truc-nha .single-project .item .video-view .play-video-icon,
-    #vat-lieu-hoan-thien .single-project .item .video-view .play-video-icon,
-    #cam-nang-xay-nha .single-project .item .video-view .play-video-icon,
-    #tinh-chi-phi-xay-dung .single-project .item .video-view .play-video-icon,
-    #hoat-dong .single-project .item .video-view .play-video-icon,
-    #danh-gia .single-project .item .video-view .play-video-icon,
-    #bang-bao-gia .single-project .item .video-view .play-video-icon,
-    #cam-ket .single-project .item .video-view .play-video-icon {
+    #cong-trinh-tieu-bieu .single-project .video-view .play-video-icon,
+    #xay-dung-nha .single-project .video-view .play-video-icon,
+    #sua-chua-nha .single-project .video-view .play-video-icon,
+    #nang-cap-nha .single-project .video-view .play-video-icon,
+    #thiet-ke-kien-truc-nha .single-project .video-view .play-video-icon,
+    #vat-lieu-hoan-thien .single-project .video-view .play-video-icon,
+    #cam-nang-xay-nha .single-project .video-view .play-video-icon,
+    #tinh-chi-phi-xay-dung .single-project .video-view .play-video-icon,
+    #hoat-dong .single-project .video-view .play-video-icon,
+    #danh-gia .single-project .video-view .play-video-icon,
+    #bang-bao-gia .single-project .video-view .play-video-icon,
+    #cam-ket .single-project .video-view .play-video-icon {
       position: absolute;
       width: 43px;
       height: 30px;
@@ -248,299 +387,306 @@ section {
       background-size: auto;
       cursor: pointer;
       background-size: 100% 100%; }
-
-#cong-trinh-tieu-bieu .single-project .card-body,
-#xay-dung-nha .single-project .card-body,
-#sua-chua-nha .single-project .card-body,
-#nang-cap-nha .single-project .card-body,
-#thiet-ke-kien-truc-nha .single-project .card-body,
-#vat-lieu-hoan-thien .single-project .card-body,
-#cam-nang-xay-nha .single-project .card-body,
-#tinh-chi-phi-xay-dung .single-project .card-body,
-#hoat-dong .single-project .card-body,
-#danh-gia .single-project .card-body,
-#bang-bao-gia .single-project .card-body,
-#cam-ket .single-project .card-body {
-  padding: 10px; }
-  #cong-trinh-tieu-bieu .single-project .card-body .title-card,
-  #xay-dung-nha .single-project .card-body .title-card,
-  #sua-chua-nha .single-project .card-body .title-card,
-  #nang-cap-nha .single-project .card-body .title-card,
-  #thiet-ke-kien-truc-nha .single-project .card-body .title-card,
-  #vat-lieu-hoan-thien .single-project .card-body .title-card,
-  #cam-nang-xay-nha .single-project .card-body .title-card,
-  #tinh-chi-phi-xay-dung .single-project .card-body .title-card,
-  #hoat-dong .single-project .card-body .title-card,
-  #danh-gia .single-project .card-body .title-card,
-  #bang-bao-gia .single-project .card-body .title-card,
-  #cam-ket .single-project .card-body .title-card {
-    font-size: 18px;
-    display: block;
-    text-align: left;
-    text-transform: uppercase;
-    padding: 10px 0 15px;
-    text-align: center;
-    height: 52px;
-    overflow: hidden;
-    color: #114831; }
-    #cong-trinh-tieu-bieu .single-project .card-body .title-card:hover,
-    #xay-dung-nha .single-project .card-body .title-card:hover,
-    #sua-chua-nha .single-project .card-body .title-card:hover,
-    #nang-cap-nha .single-project .card-body .title-card:hover,
-    #thiet-ke-kien-truc-nha .single-project .card-body .title-card:hover,
-    #vat-lieu-hoan-thien .single-project .card-body .title-card:hover,
-    #cam-nang-xay-nha .single-project .card-body .title-card:hover,
-    #tinh-chi-phi-xay-dung .single-project .card-body .title-card:hover,
-    #hoat-dong .single-project .card-body .title-card:hover,
-    #danh-gia .single-project .card-body .title-card:hover,
-    #bang-bao-gia .single-project .card-body .title-card:hover,
-    #cam-ket .single-project .card-body .title-card:hover {
-      color: #1f4286;
-      text-decoration: underline; }
-  #cong-trinh-tieu-bieu .single-project .card-body .note-card,
-  #xay-dung-nha .single-project .card-body .note-card,
-  #sua-chua-nha .single-project .card-body .note-card,
-  #nang-cap-nha .single-project .card-body .note-card,
-  #thiet-ke-kien-truc-nha .single-project .card-body .note-card,
-  #vat-lieu-hoan-thien .single-project .card-body .note-card,
-  #cam-nang-xay-nha .single-project .card-body .note-card,
-  #tinh-chi-phi-xay-dung .single-project .card-body .note-card,
-  #hoat-dong .single-project .card-body .note-card,
-  #danh-gia .single-project .card-body .note-card,
-  #bang-bao-gia .single-project .card-body .note-card,
-  #cam-ket .single-project .card-body .note-card {
-    text-align: justify;
+  #cong-trinh-tieu-bieu .single-project .card-body,
+  #xay-dung-nha .single-project .card-body,
+  #sua-chua-nha .single-project .card-body,
+  #nang-cap-nha .single-project .card-body,
+  #thiet-ke-kien-truc-nha .single-project .card-body,
+  #vat-lieu-hoan-thien .single-project .card-body,
+  #cam-nang-xay-nha .single-project .card-body,
+  #tinh-chi-phi-xay-dung .single-project .card-body,
+  #hoat-dong .single-project .card-body,
+  #danh-gia .single-project .card-body,
+  #bang-bao-gia .single-project .card-body,
+  #cam-ket .single-project .card-body {
+    padding: 10px; }
+    #cong-trinh-tieu-bieu .single-project .card-body .title-card,
+    #xay-dung-nha .single-project .card-body .title-card,
+    #sua-chua-nha .single-project .card-body .title-card,
+    #nang-cap-nha .single-project .card-body .title-card,
+    #thiet-ke-kien-truc-nha .single-project .card-body .title-card,
+    #vat-lieu-hoan-thien .single-project .card-body .title-card,
+    #cam-nang-xay-nha .single-project .card-body .title-card,
+    #tinh-chi-phi-xay-dung .single-project .card-body .title-card,
+    #hoat-dong .single-project .card-body .title-card,
+    #danh-gia .single-project .card-body .title-card,
+    #bang-bao-gia .single-project .card-body .title-card,
+    #cam-ket .single-project .card-body .title-card {
+      font-size: 18px;
+      display: block;
+      text-align: left;
+      text-transform: uppercase;
+      padding: 10px 0 15px;
+      text-align: center;
+      height: 52px;
+      overflow: hidden;
+      color: #114831; }
+      #cong-trinh-tieu-bieu .single-project .card-body .title-card:hover,
+      #xay-dung-nha .single-project .card-body .title-card:hover,
+      #sua-chua-nha .single-project .card-body .title-card:hover,
+      #nang-cap-nha .single-project .card-body .title-card:hover,
+      #thiet-ke-kien-truc-nha .single-project .card-body .title-card:hover,
+      #vat-lieu-hoan-thien .single-project .card-body .title-card:hover,
+      #cam-nang-xay-nha .single-project .card-body .title-card:hover,
+      #tinh-chi-phi-xay-dung .single-project .card-body .title-card:hover,
+      #hoat-dong .single-project .card-body .title-card:hover,
+      #danh-gia .single-project .card-body .title-card:hover,
+      #bang-bao-gia .single-project .card-body .title-card:hover,
+      #cam-ket .single-project .card-body .title-card:hover {
+        color: #1f4286;
+        text-decoration: underline; }
+    #cong-trinh-tieu-bieu .single-project .card-body .note-card,
+    #xay-dung-nha .single-project .card-body .note-card,
+    #sua-chua-nha .single-project .card-body .note-card,
+    #nang-cap-nha .single-project .card-body .note-card,
+    #thiet-ke-kien-truc-nha .single-project .card-body .note-card,
+    #vat-lieu-hoan-thien .single-project .card-body .note-card,
+    #cam-nang-xay-nha .single-project .card-body .note-card,
+    #tinh-chi-phi-xay-dung .single-project .card-body .note-card,
+    #hoat-dong .single-project .card-body .note-card,
+    #danh-gia .single-project .card-body .note-card,
+    #bang-bao-gia .single-project .card-body .note-card,
+    #cam-ket .single-project .card-body .note-card {
+      text-align: justify;
+      overflow: hidden; }
+  #cong-trinh-tieu-bieu .read-more,
+  #xay-dung-nha .read-more,
+  #sua-chua-nha .read-more,
+  #nang-cap-nha .read-more,
+  #thiet-ke-kien-truc-nha .read-more,
+  #vat-lieu-hoan-thien .read-more,
+  #cam-nang-xay-nha .read-more,
+  #tinh-chi-phi-xay-dung .read-more,
+  #hoat-dong .read-more,
+  #danh-gia .read-more,
+  #bang-bao-gia .read-more,
+  #cam-ket .read-more {
+    font-size: 15px; }
+    #cong-trinh-tieu-bieu .read-more a,
+    #cong-trinh-tieu-bieu .read-more button,
+    #xay-dung-nha .read-more a,
+    #xay-dung-nha .read-more button,
+    #sua-chua-nha .read-more a,
+    #sua-chua-nha .read-more button,
+    #nang-cap-nha .read-more a,
+    #nang-cap-nha .read-more button,
+    #thiet-ke-kien-truc-nha .read-more a,
+    #thiet-ke-kien-truc-nha .read-more button,
+    #vat-lieu-hoan-thien .read-more a,
+    #vat-lieu-hoan-thien .read-more button,
+    #cam-nang-xay-nha .read-more a,
+    #cam-nang-xay-nha .read-more button,
+    #tinh-chi-phi-xay-dung .read-more a,
+    #tinh-chi-phi-xay-dung .read-more button,
+    #hoat-dong .read-more a,
+    #hoat-dong .read-more button,
+    #danh-gia .read-more a,
+    #danh-gia .read-more button,
+    #bang-bao-gia .read-more a,
+    #bang-bao-gia .read-more button,
+    #cam-ket .read-more a,
+    #cam-ket .read-more button {
+      width: 220px;
+      color: white;
+      background: #1b4a1c;
+      display: block;
+      padding: 10px;
+      text-transform: uppercase;
+      font-family: "Roboto Condensed"; }
+      #cong-trinh-tieu-bieu .read-more a:hover,
+      #cong-trinh-tieu-bieu .read-more button:hover,
+      #xay-dung-nha .read-more a:hover,
+      #xay-dung-nha .read-more button:hover,
+      #sua-chua-nha .read-more a:hover,
+      #sua-chua-nha .read-more button:hover,
+      #nang-cap-nha .read-more a:hover,
+      #nang-cap-nha .read-more button:hover,
+      #thiet-ke-kien-truc-nha .read-more a:hover,
+      #thiet-ke-kien-truc-nha .read-more button:hover,
+      #vat-lieu-hoan-thien .read-more a:hover,
+      #vat-lieu-hoan-thien .read-more button:hover,
+      #cam-nang-xay-nha .read-more a:hover,
+      #cam-nang-xay-nha .read-more button:hover,
+      #tinh-chi-phi-xay-dung .read-more a:hover,
+      #tinh-chi-phi-xay-dung .read-more button:hover,
+      #hoat-dong .read-more a:hover,
+      #hoat-dong .read-more button:hover,
+      #danh-gia .read-more a:hover,
+      #danh-gia .read-more button:hover,
+      #bang-bao-gia .read-more a:hover,
+      #bang-bao-gia .read-more button:hover,
+      #cam-ket .read-more a:hover,
+      #cam-ket .read-more button:hover {
+        color: yellow;
+        outline: 0;
+        text-decoration: underline; }
+  #cong-trinh-tieu-bieu .content,
+  #xay-dung-nha .content,
+  #sua-chua-nha .content,
+  #nang-cap-nha .content,
+  #thiet-ke-kien-truc-nha .content,
+  #vat-lieu-hoan-thien .content,
+  #cam-nang-xay-nha .content,
+  #tinh-chi-phi-xay-dung .content,
+  #hoat-dong .content,
+  #danh-gia .content,
+  #bang-bao-gia .content,
+  #cam-ket .content {
+    font-family: "Roboto Condensed"; }
+    #cong-trinh-tieu-bieu .content .nav-tabs,
+    #xay-dung-nha .content .nav-tabs,
+    #sua-chua-nha .content .nav-tabs,
+    #nang-cap-nha .content .nav-tabs,
+    #thiet-ke-kien-truc-nha .content .nav-tabs,
+    #vat-lieu-hoan-thien .content .nav-tabs,
+    #cam-nang-xay-nha .content .nav-tabs,
+    #tinh-chi-phi-xay-dung .content .nav-tabs,
+    #hoat-dong .content .nav-tabs,
+    #danh-gia .content .nav-tabs,
+    #bang-bao-gia .content .nav-tabs,
+    #cam-ket .content .nav-tabs {
+      border: none; }
+      #cong-trinh-tieu-bieu .content .nav-tabs .nav-item,
+      #xay-dung-nha .content .nav-tabs .nav-item,
+      #sua-chua-nha .content .nav-tabs .nav-item,
+      #nang-cap-nha .content .nav-tabs .nav-item,
+      #thiet-ke-kien-truc-nha .content .nav-tabs .nav-item,
+      #vat-lieu-hoan-thien .content .nav-tabs .nav-item,
+      #cam-nang-xay-nha .content .nav-tabs .nav-item,
+      #tinh-chi-phi-xay-dung .content .nav-tabs .nav-item,
+      #hoat-dong .content .nav-tabs .nav-item,
+      #danh-gia .content .nav-tabs .nav-item,
+      #bang-bao-gia .content .nav-tabs .nav-item,
+      #cam-ket .content .nav-tabs .nav-item {
+        margin-left: 10px; }
+        #cong-trinh-tieu-bieu .content .nav-tabs .nav-item .nav-link,
+        #xay-dung-nha .content .nav-tabs .nav-item .nav-link,
+        #sua-chua-nha .content .nav-tabs .nav-item .nav-link,
+        #nang-cap-nha .content .nav-tabs .nav-item .nav-link,
+        #thiet-ke-kien-truc-nha .content .nav-tabs .nav-item .nav-link,
+        #vat-lieu-hoan-thien .content .nav-tabs .nav-item .nav-link,
+        #cam-nang-xay-nha .content .nav-tabs .nav-item .nav-link,
+        #tinh-chi-phi-xay-dung .content .nav-tabs .nav-item .nav-link,
+        #hoat-dong .content .nav-tabs .nav-item .nav-link,
+        #danh-gia .content .nav-tabs .nav-item .nav-link,
+        #bang-bao-gia .content .nav-tabs .nav-item .nav-link,
+        #cam-ket .content .nav-tabs .nav-item .nav-link {
+          font-weight: normal;
+          background: #fff !important;
+          border-radius: 4px;
+          padding: 5px 16px;
+          margin-bottom: 5px;
+          font-size: 16px;
+          color: #1b4a1c;
+          border: 1px solid #1b4a1c !important;
+          text-transform: uppercase; }
+        #cong-trinh-tieu-bieu .content .nav-tabs .nav-item .active,
+        #xay-dung-nha .content .nav-tabs .nav-item .active,
+        #sua-chua-nha .content .nav-tabs .nav-item .active,
+        #nang-cap-nha .content .nav-tabs .nav-item .active,
+        #thiet-ke-kien-truc-nha .content .nav-tabs .nav-item .active,
+        #vat-lieu-hoan-thien .content .nav-tabs .nav-item .active,
+        #cam-nang-xay-nha .content .nav-tabs .nav-item .active,
+        #tinh-chi-phi-xay-dung .content .nav-tabs .nav-item .active,
+        #hoat-dong .content .nav-tabs .nav-item .active,
+        #danh-gia .content .nav-tabs .nav-item .active,
+        #bang-bao-gia .content .nav-tabs .nav-item .active,
+        #cam-ket .content .nav-tabs .nav-item .active {
+          background: #1b4a1c !important;
+          color: #fff !important; }
+  #cong-trinh-tieu-bieu .media .media-left,
+  #cong-trinh-tieu-bieu .media .media-body,
+  #xay-dung-nha .media .media-left,
+  #xay-dung-nha .media .media-body,
+  #sua-chua-nha .media .media-left,
+  #sua-chua-nha .media .media-body,
+  #nang-cap-nha .media .media-left,
+  #nang-cap-nha .media .media-body,
+  #thiet-ke-kien-truc-nha .media .media-left,
+  #thiet-ke-kien-truc-nha .media .media-body,
+  #vat-lieu-hoan-thien .media .media-left,
+  #vat-lieu-hoan-thien .media .media-body,
+  #cam-nang-xay-nha .media .media-left,
+  #cam-nang-xay-nha .media .media-body,
+  #tinh-chi-phi-xay-dung .media .media-left,
+  #tinh-chi-phi-xay-dung .media .media-body,
+  #hoat-dong .media .media-left,
+  #hoat-dong .media .media-body,
+  #danh-gia .media .media-left,
+  #danh-gia .media .media-body,
+  #bang-bao-gia .media .media-left,
+  #bang-bao-gia .media .media-body,
+  #cam-ket .media .media-left,
+  #cam-ket .media .media-body {
+    vertical-align: top;
+    padding-right: 10px; }
+    #cong-trinh-tieu-bieu .media .media-left img,
+    #cong-trinh-tieu-bieu .media .media-body img,
+    #xay-dung-nha .media .media-left img,
+    #xay-dung-nha .media .media-body img,
+    #sua-chua-nha .media .media-left img,
+    #sua-chua-nha .media .media-body img,
+    #nang-cap-nha .media .media-left img,
+    #nang-cap-nha .media .media-body img,
+    #thiet-ke-kien-truc-nha .media .media-left img,
+    #thiet-ke-kien-truc-nha .media .media-body img,
+    #vat-lieu-hoan-thien .media .media-left img,
+    #vat-lieu-hoan-thien .media .media-body img,
+    #cam-nang-xay-nha .media .media-left img,
+    #cam-nang-xay-nha .media .media-body img,
+    #tinh-chi-phi-xay-dung .media .media-left img,
+    #tinh-chi-phi-xay-dung .media .media-body img,
+    #hoat-dong .media .media-left img,
+    #hoat-dong .media .media-body img,
+    #danh-gia .media .media-left img,
+    #danh-gia .media .media-body img,
+    #bang-bao-gia .media .media-left img,
+    #bang-bao-gia .media .media-body img,
+    #cam-ket .media .media-left img,
+    #cam-ket .media .media-body img {
+      width: 50px; }
+  #cong-trinh-tieu-bieu .media .media-body,
+  #xay-dung-nha .media .media-body,
+  #sua-chua-nha .media .media-body,
+  #nang-cap-nha .media .media-body,
+  #thiet-ke-kien-truc-nha .media .media-body,
+  #vat-lieu-hoan-thien .media .media-body,
+  #cam-nang-xay-nha .media .media-body,
+  #tinh-chi-phi-xay-dung .media .media-body,
+  #hoat-dong .media .media-body,
+  #danh-gia .media .media-body,
+  #bang-bao-gia .media .media-body,
+  #cam-ket .media .media-body {
+    vertical-align: top;
     overflow: hidden; }
-
-#cong-trinh-tieu-bieu .read-more a,
-#cong-trinh-tieu-bieu .read-more button,
-#xay-dung-nha .read-more a,
-#xay-dung-nha .read-more button,
-#sua-chua-nha .read-more a,
-#sua-chua-nha .read-more button,
-#nang-cap-nha .read-more a,
-#nang-cap-nha .read-more button,
-#thiet-ke-kien-truc-nha .read-more a,
-#thiet-ke-kien-truc-nha .read-more button,
-#vat-lieu-hoan-thien .read-more a,
-#vat-lieu-hoan-thien .read-more button,
-#cam-nang-xay-nha .read-more a,
-#cam-nang-xay-nha .read-more button,
-#tinh-chi-phi-xay-dung .read-more a,
-#tinh-chi-phi-xay-dung .read-more button,
-#hoat-dong .read-more a,
-#hoat-dong .read-more button,
-#danh-gia .read-more a,
-#danh-gia .read-more button,
-#bang-bao-gia .read-more a,
-#bang-bao-gia .read-more button,
-#cam-ket .read-more a,
-#cam-ket .read-more button {
-  width: 220px;
-  color: white;
-  background: #1b4a1c;
-  display: block;
-  padding: 10px;
-  text-transform: uppercase;
-  font-family: "Roboto Condensed"; }
-  #cong-trinh-tieu-bieu .read-more a:hover,
-  #cong-trinh-tieu-bieu .read-more button:hover,
-  #xay-dung-nha .read-more a:hover,
-  #xay-dung-nha .read-more button:hover,
-  #sua-chua-nha .read-more a:hover,
-  #sua-chua-nha .read-more button:hover,
-  #nang-cap-nha .read-more a:hover,
-  #nang-cap-nha .read-more button:hover,
-  #thiet-ke-kien-truc-nha .read-more a:hover,
-  #thiet-ke-kien-truc-nha .read-more button:hover,
-  #vat-lieu-hoan-thien .read-more a:hover,
-  #vat-lieu-hoan-thien .read-more button:hover,
-  #cam-nang-xay-nha .read-more a:hover,
-  #cam-nang-xay-nha .read-more button:hover,
-  #tinh-chi-phi-xay-dung .read-more a:hover,
-  #tinh-chi-phi-xay-dung .read-more button:hover,
-  #hoat-dong .read-more a:hover,
-  #hoat-dong .read-more button:hover,
-  #danh-gia .read-more a:hover,
-  #danh-gia .read-more button:hover,
-  #bang-bao-gia .read-more a:hover,
-  #bang-bao-gia .read-more button:hover,
-  #cam-ket .read-more a:hover,
-  #cam-ket .read-more button:hover {
-    color: yellow;
-    outline: 0;
-    text-decoration: underline; }
-
-#cong-trinh-tieu-bieu .content,
-#xay-dung-nha .content,
-#sua-chua-nha .content,
-#nang-cap-nha .content,
-#thiet-ke-kien-truc-nha .content,
-#vat-lieu-hoan-thien .content,
-#cam-nang-xay-nha .content,
-#tinh-chi-phi-xay-dung .content,
-#hoat-dong .content,
-#danh-gia .content,
-#bang-bao-gia .content,
-#cam-ket .content {
-  font-family: "Roboto Condensed"; }
-  #cong-trinh-tieu-bieu .content .nav-tabs,
-  #xay-dung-nha .content .nav-tabs,
-  #sua-chua-nha .content .nav-tabs,
-  #nang-cap-nha .content .nav-tabs,
-  #thiet-ke-kien-truc-nha .content .nav-tabs,
-  #vat-lieu-hoan-thien .content .nav-tabs,
-  #cam-nang-xay-nha .content .nav-tabs,
-  #tinh-chi-phi-xay-dung .content .nav-tabs,
-  #hoat-dong .content .nav-tabs,
-  #danh-gia .content .nav-tabs,
-  #bang-bao-gia .content .nav-tabs,
-  #cam-ket .content .nav-tabs {
-    border: none; }
-    #cong-trinh-tieu-bieu .content .nav-tabs .nav-item,
-    #xay-dung-nha .content .nav-tabs .nav-item,
-    #sua-chua-nha .content .nav-tabs .nav-item,
-    #nang-cap-nha .content .nav-tabs .nav-item,
-    #thiet-ke-kien-truc-nha .content .nav-tabs .nav-item,
-    #vat-lieu-hoan-thien .content .nav-tabs .nav-item,
-    #cam-nang-xay-nha .content .nav-tabs .nav-item,
-    #tinh-chi-phi-xay-dung .content .nav-tabs .nav-item,
-    #hoat-dong .content .nav-tabs .nav-item,
-    #danh-gia .content .nav-tabs .nav-item,
-    #bang-bao-gia .content .nav-tabs .nav-item,
-    #cam-ket .content .nav-tabs .nav-item {
-      margin-left: 10px; }
-      #cong-trinh-tieu-bieu .content .nav-tabs .nav-item .nav-link,
-      #xay-dung-nha .content .nav-tabs .nav-item .nav-link,
-      #sua-chua-nha .content .nav-tabs .nav-item .nav-link,
-      #nang-cap-nha .content .nav-tabs .nav-item .nav-link,
-      #thiet-ke-kien-truc-nha .content .nav-tabs .nav-item .nav-link,
-      #vat-lieu-hoan-thien .content .nav-tabs .nav-item .nav-link,
-      #cam-nang-xay-nha .content .nav-tabs .nav-item .nav-link,
-      #tinh-chi-phi-xay-dung .content .nav-tabs .nav-item .nav-link,
-      #hoat-dong .content .nav-tabs .nav-item .nav-link,
-      #danh-gia .content .nav-tabs .nav-item .nav-link,
-      #bang-bao-gia .content .nav-tabs .nav-item .nav-link,
-      #cam-ket .content .nav-tabs .nav-item .nav-link {
-        font-weight: normal;
-        background: #fff !important;
-        border-radius: 4px;
-        padding: 5px 16px;
-        margin-bottom: 5px;
-        font-size: 16px;
-        color: #1b4a1c;
-        border: 1px solid #1b4a1c !important;
-        text-transform: uppercase; }
-      #cong-trinh-tieu-bieu .content .nav-tabs .nav-item .active,
-      #xay-dung-nha .content .nav-tabs .nav-item .active,
-      #sua-chua-nha .content .nav-tabs .nav-item .active,
-      #nang-cap-nha .content .nav-tabs .nav-item .active,
-      #thiet-ke-kien-truc-nha .content .nav-tabs .nav-item .active,
-      #vat-lieu-hoan-thien .content .nav-tabs .nav-item .active,
-      #cam-nang-xay-nha .content .nav-tabs .nav-item .active,
-      #tinh-chi-phi-xay-dung .content .nav-tabs .nav-item .active,
-      #hoat-dong .content .nav-tabs .nav-item .active,
-      #danh-gia .content .nav-tabs .nav-item .active,
-      #bang-bao-gia .content .nav-tabs .nav-item .active,
-      #cam-ket .content .nav-tabs .nav-item .active {
-        background: #1b4a1c !important;
-        color: #fff !important; }
-
-#cong-trinh-tieu-bieu .media .media-left,
-#cong-trinh-tieu-bieu .media .media-body,
-#xay-dung-nha .media .media-left,
-#xay-dung-nha .media .media-body,
-#sua-chua-nha .media .media-left,
-#sua-chua-nha .media .media-body,
-#nang-cap-nha .media .media-left,
-#nang-cap-nha .media .media-body,
-#thiet-ke-kien-truc-nha .media .media-left,
-#thiet-ke-kien-truc-nha .media .media-body,
-#vat-lieu-hoan-thien .media .media-left,
-#vat-lieu-hoan-thien .media .media-body,
-#cam-nang-xay-nha .media .media-left,
-#cam-nang-xay-nha .media .media-body,
-#tinh-chi-phi-xay-dung .media .media-left,
-#tinh-chi-phi-xay-dung .media .media-body,
-#hoat-dong .media .media-left,
-#hoat-dong .media .media-body,
-#danh-gia .media .media-left,
-#danh-gia .media .media-body,
-#bang-bao-gia .media .media-left,
-#bang-bao-gia .media .media-body,
-#cam-ket .media .media-left,
-#cam-ket .media .media-body {
-  vertical-align: top;
-  padding-right: 10px; }
-  #cong-trinh-tieu-bieu .media .media-left img,
-  #cong-trinh-tieu-bieu .media .media-body img,
-  #xay-dung-nha .media .media-left img,
-  #xay-dung-nha .media .media-body img,
-  #sua-chua-nha .media .media-left img,
-  #sua-chua-nha .media .media-body img,
-  #nang-cap-nha .media .media-left img,
-  #nang-cap-nha .media .media-body img,
-  #thiet-ke-kien-truc-nha .media .media-left img,
-  #thiet-ke-kien-truc-nha .media .media-body img,
-  #vat-lieu-hoan-thien .media .media-left img,
-  #vat-lieu-hoan-thien .media .media-body img,
-  #cam-nang-xay-nha .media .media-left img,
-  #cam-nang-xay-nha .media .media-body img,
-  #tinh-chi-phi-xay-dung .media .media-left img,
-  #tinh-chi-phi-xay-dung .media .media-body img,
-  #hoat-dong .media .media-left img,
-  #hoat-dong .media .media-body img,
-  #danh-gia .media .media-left img,
-  #danh-gia .media .media-body img,
-  #bang-bao-gia .media .media-left img,
-  #bang-bao-gia .media .media-body img,
-  #cam-ket .media .media-left img,
-  #cam-ket .media .media-body img {
-    width: 50px; }
-
-#cong-trinh-tieu-bieu .media .media-body,
-#xay-dung-nha .media .media-body,
-#sua-chua-nha .media .media-body,
-#nang-cap-nha .media .media-body,
-#thiet-ke-kien-truc-nha .media .media-body,
-#vat-lieu-hoan-thien .media .media-body,
-#cam-nang-xay-nha .media .media-body,
-#tinh-chi-phi-xay-dung .media .media-body,
-#hoat-dong .media .media-body,
-#danh-gia .media .media-body,
-#bang-bao-gia .media .media-body,
-#cam-ket .media .media-body {
-  vertical-align: top;
-  overflow: hidden; }
-  #cong-trinh-tieu-bieu .media .media-body .media-heading,
-  #xay-dung-nha .media .media-body .media-heading,
-  #sua-chua-nha .media .media-body .media-heading,
-  #nang-cap-nha .media .media-body .media-heading,
-  #thiet-ke-kien-truc-nha .media .media-body .media-heading,
-  #vat-lieu-hoan-thien .media .media-body .media-heading,
-  #cam-nang-xay-nha .media .media-body .media-heading,
-  #tinh-chi-phi-xay-dung .media .media-body .media-heading,
-  #hoat-dong .media .media-body .media-heading,
-  #danh-gia .media .media-body .media-heading,
-  #bang-bao-gia .media .media-body .media-heading,
-  #cam-ket .media .media-body .media-heading {
-    font-size: 1em;
-    font-weight: bold; }
-
-#cong-trinh-tieu-bieu #tabVatLieu .nav-link:hover,
-#xay-dung-nha #tabVatLieu .nav-link:hover,
-#sua-chua-nha #tabVatLieu .nav-link:hover,
-#nang-cap-nha #tabVatLieu .nav-link:hover,
-#thiet-ke-kien-truc-nha #tabVatLieu .nav-link:hover,
-#vat-lieu-hoan-thien #tabVatLieu .nav-link:hover,
-#cam-nang-xay-nha #tabVatLieu .nav-link:hover,
-#tinh-chi-phi-xay-dung #tabVatLieu .nav-link:hover,
-#hoat-dong #tabVatLieu .nav-link:hover,
-#danh-gia #tabVatLieu .nav-link:hover,
-#bang-bao-gia #tabVatLieu .nav-link:hover,
-#cam-ket #tabVatLieu .nav-link:hover {
-  background: #1b4a1c !important;
-  color: #fff !important; }
+    #cong-trinh-tieu-bieu .media .media-body .media-heading,
+    #xay-dung-nha .media .media-body .media-heading,
+    #sua-chua-nha .media .media-body .media-heading,
+    #nang-cap-nha .media .media-body .media-heading,
+    #thiet-ke-kien-truc-nha .media .media-body .media-heading,
+    #vat-lieu-hoan-thien .media .media-body .media-heading,
+    #cam-nang-xay-nha .media .media-body .media-heading,
+    #tinh-chi-phi-xay-dung .media .media-body .media-heading,
+    #hoat-dong .media .media-body .media-heading,
+    #danh-gia .media .media-body .media-heading,
+    #bang-bao-gia .media .media-body .media-heading,
+    #cam-ket .media .media-body .media-heading {
+      font-size: 1em;
+      font-weight: bold; }
+  #cong-trinh-tieu-bieu #tabVatLieu .nav-link:hover,
+  #xay-dung-nha #tabVatLieu .nav-link:hover,
+  #sua-chua-nha #tabVatLieu .nav-link:hover,
+  #nang-cap-nha #tabVatLieu .nav-link:hover,
+  #thiet-ke-kien-truc-nha #tabVatLieu .nav-link:hover,
+  #vat-lieu-hoan-thien #tabVatLieu .nav-link:hover,
+  #cam-nang-xay-nha #tabVatLieu .nav-link:hover,
+  #tinh-chi-phi-xay-dung #tabVatLieu .nav-link:hover,
+  #hoat-dong #tabVatLieu .nav-link:hover,
+  #danh-gia #tabVatLieu .nav-link:hover,
+  #bang-bao-gia #tabVatLieu .nav-link:hover,
+  #cam-ket #tabVatLieu .nav-link:hover {
+    background: #1b4a1c !important;
+    color: #fff !important; }
 
 #footer {
   color: #fff;
