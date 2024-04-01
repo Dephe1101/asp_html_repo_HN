@@ -84,7 +84,8 @@
                         </li>
                         <li class="nav-item">
                             <a class="navbar-brand d-none d-lg-block" href="/" title="Minh Bảo">
-                                <img src="https://minhbao.vn/wp-content/uploads/2020/09/Logo-kh%C3%B4ng-n%E1%BB%81n-300x80.png" alt="ACS VIỆT NAM">
+                                <img src="https://minhbao.vn/wp-content/uploads/2020/09/Logo-kh%C3%B4ng-n%E1%BB%81n-300x80.png"
+                                    alt="ACS VIỆT NAM">
                             </a>
                         </li>
                         <li class="nav-item dropdown">
@@ -119,8 +120,8 @@
                             <a class="nav-link active" aria-current="page" href="#">LIÊN HỆ</a>
                         </li>
                         <li class="nav-item">
-                            <div type="button" onclick="btnSearch()" class="btn_search_mobile_top"><i
-                                    class="fa fa-search"></i></div>
+                            <button onclick="btnSearch()" class="btn_search_mobile_top openToggle"><i
+                                    class="fa fa-search"></i></button>
                             <div class="search search_mobile" id="btn_search_mobile">
                                 <form role="search" method="get" class="search-form" action="">
                                     <input type="text" name="s" id="s" placeholder="Nhập từ khóa"
@@ -3775,15 +3776,21 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
         </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"
+        integrity="sha512-nhY06wKras39lb9lRO76J4397CH1XpRSLfLJSftTeo3+q2vP7PaebILH9TqH+GRpnOhfAGjuYMVmVTOZJ+682w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        function btnSearch() {
-            const flag = document.getElementById("btn_search_mobile").style.display
-            if (flag === 'none') {
-                document.getElementById("btn_search_mobile").style.display = "block";
-            } else {
-                document.getElementById("btn_search_mobile").style.display = "none"
-            }
-        }
+        $(".btn_search_mobile_top").on("click", function () {
+            $(".search_mobile").toggle("slow");
+        });
+        // function btnSearch() {
+        //     const flag = document.getElementById("btn_search_mobile").style.display
+        //     if (flag === 'none') {
+        //         document.getElementById("btn_search_mobile").style.display = "block";
+        //     } else {
+        //         document.getElementById("btn_search_mobile").style.display = "none";
+        //     }
+        // }
 
     </script>
 </body>
