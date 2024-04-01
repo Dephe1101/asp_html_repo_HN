@@ -30,14 +30,10 @@ body {
   min-height: 100vh;
   margin: 0;
   color: #333333;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 22px;
-  font-family: "Roboto Condensed";
-  font:
-    16px/1.7 Arial,
-    Helvetica,
-    sans-serif;
+  font-family: 'Roboto', Condensed;
   box-sizing: border-box;
 }
 p {
@@ -76,7 +72,7 @@ header {
           color: #333333;
           font-weight: 600;
           text-decoration: none;
-
+          font-size: 20px;
           &:hover {
             color: #da2028;
           }
@@ -181,7 +177,6 @@ section {
     color: #009a4f;
     text-transform: uppercase;
     margin-bottom: 1px;
-    font-family: "Roboto Condensed", sans-serif;
     font-size: 22px;
     position: relative;
     margin: 15px 0;
@@ -336,7 +331,6 @@ section {
       text-align: center;
       padding: 7px;
       margin: 20px auto 0;
-      font-family: "Roboto Condensed";
       text-transform: uppercase;
       font-size: 14px;
       display: block;
@@ -393,7 +387,6 @@ img {
     display: block;
     padding: 10px;
     text-transform: uppercase;
-    font-family: "Roboto Condensed";
     &:hover {
       color: yellow;
       outline: 0;
@@ -512,18 +505,16 @@ img {
 #danh-gia,
 #bang-bao-gia,
 #cam-ket {
-  font-family: "Roboto Condensed";
   img {
     max-width: 100%;
   }
   .title-heading {
     h2 {
       text-transform: uppercase;
-      font-family: "Roboto Condensed";
-      font-size: 24px;
+      font-size: 34px;
       position: relative;
       margin-bottom: 10px;
-      font-weight: 500;
+      font-weight: 700;
       text-align: center;
       padding-bottom: 0;
       color: #1b4a1c;
@@ -563,7 +554,6 @@ img {
   }
 
   .content {
-    font-family: "Roboto Condensed";
     .nav-tabs {
       border: none;
       .nav-item {
@@ -574,7 +564,6 @@ img {
           border-radius: 4px;
           padding: 5px 16px;
           margin-bottom: 5px;
-          font-size: 16px;
           color: #1b4a1c;
           border: 1px solid #1b4a1c !important;
           text-transform: uppercase;
@@ -631,7 +620,6 @@ img {
       border-bottom: 1px solid #fff;
       margin-bottom: 20px;
       text-transform: uppercase;
-      font-family: "Roboto Condensed";
     }
     .menu_bottom {
       li {
@@ -654,7 +642,6 @@ img {
     h3 {
       font-size: 18px;
       text-transform: uppercase;
-      font-family: "Roboto Condensed";
       margin-bottom: 10px;
     }
   }
@@ -728,7 +715,6 @@ img {
   margin-top: 10px;
   color: #000;
   z-index: 9999;
-  font-family: "Roboto Condensed";
   font-size: 20px;
   text-transform: uppercase;
   padding: 8px 30px;
