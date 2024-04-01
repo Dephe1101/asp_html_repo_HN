@@ -23,7 +23,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
-  font-family: 'Roboto', Condensed;
+  font-family: "Roboto", Condensed;
   box-sizing: border-box; }
 
 p {
@@ -111,7 +111,7 @@ section {
 
 .breadcum {
   background: #ebf2ff; }
-  .breadcum ::before {
+  .breadcum .tt ::before {
     display: table;
     content: " "; }
   .breadcum .navigation {
@@ -129,32 +129,102 @@ section {
           max-width: 100%;
           height: auto; }
 
+.tt {
+  line-height: 38px;
+  color: #009a4f;
+  text-transform: uppercase;
+  margin-bottom: 1px;
+  font-size: 22px;
+  position: relative;
+  margin: 15px 0;
+  font-weight: 700; }
+  .tt::before {
+    position: absolute;
+    content: "";
+    width: 20%;
+    left: 0;
+    bottom: 0;
+    background: #000;
+    height: 2px; }
+  .tt::after {
+    position: absolute;
+    content: "";
+    width: 79%;
+    left: 21%;
+    bottom: 0;
+    background: #009a4f;
+    height: 2px; }
+
+#main-content .read-more {
+  font-size: 10px; }
+  #main-content .read-more a {
+    width: 150px;
+    padding: 5px; }
+
+#main-content .title-heading {
+  margin-top: 50px; }
+  #main-content .title-heading h2 {
+    text-transform: uppercase;
+    font-size: 34px;
+    position: relative;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    color: #1b4a1c;
+    position: relative;
+    margin-top: 0; }
+
+#main-content .form_tienich {
+  overflow: hidden;
+  border: 1px solid #078844;
+  padding: 20px; }
+
+#main-content #ketquatinh {
+  background: #edf6ff;
+  padding: 30px; }
+
+#main-content h2 {
+  font-size: 1em; }
+
+#main-content .entry ol {
+  padding: 0; }
+  #main-content .entry ol #toc_container {
+    margin: 15px 0; }
+    #main-content .entry ol #toc_container ul {
+      padding: 0; }
+
+#toc_container {
+  margin: 0 auto;
+  border: 1px solid #aaa;
+  padding: 10px;
+  margin-bottom: 1em;
+  width: auto;
+  display: table;
+  font-size: 95%;
+  background: #edf6ff; }
+  #toc_container .toc_title {
+    text-align: center;
+    font-weight: 700;
+    margin: 0;
+    padding: 0; }
+  #toc_container .toc_list {
+    margin-top: 1em; }
+    #toc_container .toc_list li {
+      font-size: 110%;
+      list-style: none; }
+      #toc_container .toc_list li a {
+        text-decoration: none;
+        text-shadow: none;
+        color: #1b4a1c; }
+        #toc_container .toc_list li a:hover {
+          text-decoration: underline;
+          color: #2a6496;
+          outline: 0; }
+
 #content {
   min-height: 300px; }
-  #content .tt {
-    line-height: 38px;
-    color: #009a4f;
-    text-transform: uppercase;
-    margin-bottom: 1px;
-    font-size: 22px;
-    position: relative;
-    margin: 15px 0; }
-    #content .tt::before {
-      position: absolute;
-      content: "";
-      width: 20%;
-      left: 0;
-      bottom: 0;
-      background: #000;
-      height: 2px; }
-    #content .tt::after {
-      position: absolute;
-      content: "";
-      width: 79%;
-      left: 21%;
-      bottom: 0;
-      background: #009a4f;
-      height: 2px; }
   #content .cnt {
     margin-bottom: 20px;
     padding-top: 20px; }
@@ -182,33 +252,6 @@ section {
       max-width: 100%;
       display: block;
       overflow: hidden; }
-    #content .cnt .single_content #toc_container {
-      margin: 0 auto;
-      border: 1px solid #aaa;
-      padding: 10px;
-      margin-bottom: 1em;
-      width: auto;
-      display: table;
-      font-size: 95%;
-      background: #edf6ff; }
-      #content .cnt .single_content #toc_container .toc_title {
-        text-align: center;
-        font-weight: 700;
-        margin: 0;
-        padding: 0; }
-      #content .cnt .single_content #toc_container .toc_list {
-        margin-top: 1em; }
-        #content .cnt .single_content #toc_container .toc_list li {
-          font-size: 110%;
-          list-style: none; }
-          #content .cnt .single_content #toc_container .toc_list li a {
-            text-decoration: none;
-            text-shadow: none;
-            color: #1b4a1c; }
-            #content .cnt .single_content #toc_container .toc_list li a:hover {
-              text-decoration: underline;
-              color: #2a6496;
-              outline: 0; }
     #content .cnt .single_content .author .saboxplugin-wrap {
       margin-top: 0px;
       margin-bottom: 0px;
@@ -268,24 +311,27 @@ section {
       color: yellow;
       border: 1px solid #000;
       background: #009a4f; }
-  #content .form_tuvan {
-    background: #078844;
-    font-weight: 700;
-    color: #fff;
-    padding: 20px;
-    text-align: center; }
-    #content .form_tuvan .form_tuvan_content p {
-      color: #ff0; }
-    #content .form_tuvan .form_tuvan_content textarea.form-control {
-      height: 80px; }
-  #content .img_sidebar {
-    margin-top: 15px; }
-  #content .item-news {
-    overflow: hidden;
-    margin: 10px 0; }
-    #content .item-news h3 a {
-      font-size: 12px;
-      color: #000; }
+
+.form_tuvan {
+  background: #078844;
+  font-weight: 700;
+  color: #fff;
+  padding: 20px;
+  text-align: center; }
+  .form_tuvan .form_tuvan_content p {
+    color: #ff0; }
+  .form_tuvan .form_tuvan_content textarea.form-control {
+    height: 80px; }
+
+.img_sidebar {
+  margin-top: 15px; }
+
+.item-news {
+  overflow: hidden;
+  margin: 10px 0; }
+  .item-news h3 a {
+    font-size: 12px;
+    color: #000; }
 
 .btn {
   color: #fff; }
@@ -293,6 +339,12 @@ section {
 img {
   max-width: 100%;
   height: auto; }
+
+.line_f {
+  height: 2px;
+  width: 200px;
+  margin: 0 auto 5px;
+  background: #1b4a1c; }
 
 .read-more {
   font-size: 15px; }
@@ -431,23 +483,6 @@ img {
   position: relative;
   margin-top: 0;
   text-align: center; }
-
-#cong-trinh-tieu-bieu .title-heading .line_f,
-#xay-dung-nha .title-heading .line_f,
-#sua-chua-nha .title-heading .line_f,
-#nang-cap-nha .title-heading .line_f,
-#thiet-ke-kien-truc-nha .title-heading .line_f,
-#vat-lieu-hoan-thien .title-heading .line_f,
-#cam-nang-xay-nha .title-heading .line_f,
-#tinh-chi-phi-xay-dung .title-heading .line_f,
-#hoat-dong .title-heading .line_f,
-#danh-gia .title-heading .line_f,
-#bang-bao-gia .title-heading .line_f,
-#cam-ket .title-heading .line_f {
-  height: 2px;
-  width: 200px;
-  margin: 0 auto 5px;
-  background: #1b4a1c; }
 
 #cong-trinh-tieu-bieu .single-project .video-view,
 #xay-dung-nha .single-project .video-view,
@@ -671,7 +706,8 @@ img {
     font-size: 22px;
     border-bottom: 1px solid #fff;
     margin-bottom: 20px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    padding-bottom: 10px; }
   #footer .ct-footer .menu_bottom li {
     float: left;
     margin-right: 5px;
@@ -681,6 +717,8 @@ img {
     color: white; }
     #footer .ct-footer .menu_bottom li a {
       color: white; }
+  #footer .ct-footer .item {
+    border: none; }
   #footer .ct-footer .code-schema-events {
     width: 100%;
     float: left;
