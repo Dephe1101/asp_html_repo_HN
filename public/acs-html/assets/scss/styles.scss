@@ -107,9 +107,14 @@ header {
           color: #333333;
           font-weight: 600;
           text-decoration: none;
-          font-size: 20px;
+          font-size: 15px;
           &:hover {
             color: #da2028;
+          }
+        }
+        .navbar-brand {
+          img {
+            width: 200px;
           }
         }
         .btn_search_mobile_top {

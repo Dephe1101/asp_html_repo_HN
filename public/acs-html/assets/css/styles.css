@@ -87,9 +87,11 @@ header {
         color: #333333;
         font-weight: 600;
         text-decoration: none;
-        font-size: 20px; }
+        font-size: 15px; }
         header #navbarNav .nav-main .nav-item .nav-link:hover {
           color: #da2028; }
+      header #navbarNav .nav-main .nav-item .navbar-brand img {
+        width: 200px; }
       header #navbarNav .nav-main .nav-item .btn_search_mobile_top {
         color: #fff;
         padding: 0 0 0 7px;
