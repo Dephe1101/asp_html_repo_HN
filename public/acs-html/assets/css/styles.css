@@ -193,10 +193,10 @@ section {
     height: 2px; }
 
 #main-content .read-more {
-  font-size: 10px; }
+  font-size: 12px; }
   #main-content .read-more a {
-    width: 150px;
-    padding: 5px; }
+    width: 140px;
+    padding: 8px; }
 
 #main-content .title-heading {
   margin-top: 50px; }
