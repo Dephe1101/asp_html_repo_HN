@@ -161,6 +161,8 @@ header {
               background: green;
               color: #fff;
               padding: 5px 20px;
+              display: block;
+              width: 61px;
             }
           }
         }
@@ -195,7 +197,7 @@ li {
   list-style: none;
 }
 section {
-  padding: 30px 0;
+  padding: 20px 0;
 }
 
 #cam-ket {
@@ -217,6 +219,7 @@ section {
   .navigation {
     padding: 10px 0;
     font-weight: 700;
+    margin-bottom: 0;
     overflow: hidden;
     li {
       display: inline-block;
@@ -233,6 +236,7 @@ section {
     }
   }
 }
+
 .tt {
   line-height: 38px;
   color: #009a4f;
@@ -242,6 +246,10 @@ section {
   position: relative;
   margin: 15px 0;
   font-weight: 700;
+  span {
+    font-size: 22px;
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -310,11 +318,10 @@ section {
   }
 }
 #toc_container {
-  margin: 0 auto;
   border: 1px solid #aaa;
   padding: 10px;
   margin-bottom: 1em;
-  width: auto;
+  width: 100%;
   display: table;
   font-size: 95%;
   background: #edf6ff;
@@ -326,13 +333,15 @@ section {
   }
   .toc_list {
     margin-top: 1em;
+    padding: 0;
     li {
       font-size: 110%;
-      list-style: none;
+      list-style: none !important;
       a {
         text-decoration: none;
         text-shadow: none;
         color: #1b4a1c;
+        font-weight: 500;
         &:hover {
           text-decoration: underline;
           color: #2a6496;
@@ -346,11 +355,10 @@ section {
   min-height: 300px;
   .cnt {
     margin-bottom: 20px;
-    padding-top: 20px;
     h1 {
       font-size: 28px;
       margin-bottom: 10px;
-      line-height: 30px;
+      line-height: 38px;
       font-weight: 700;
       color: #000;
     }
@@ -363,8 +371,12 @@ section {
       margin-top: 10px;
       margin-bottom: 10px;
     }
-    ul > li {
-      list-style-type: initial;
+
+    ul {
+      padding: 0;
+      li {
+        list-style-type: initial;
+      }
     }
     .single_content {
       figure {
@@ -432,6 +444,9 @@ section {
         }
       }
     }
+    .fb-share-button {
+      margin: 10px;
+    }
   }
   .comment_form {
     h3 {
@@ -457,6 +472,11 @@ section {
     }
   }
 }
+.form-select,
+.form-control {
+  border-radius: 0;
+}
+
 .form_tuvan {
   background: #078844;
   font-weight: 700;
@@ -521,17 +541,14 @@ img {
   border: 1px solid #ddd;
   word-wrap: break-word;
   list-style: none;
-  box-shadow:
-    rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-  border-radius: 10px;
+  margin-right: 10px;
+  margin-bottom: 30px;
   &:hover {
     background: #eee;
   }
   .img {
     position: relative;
     overflow: hidden;
-    border-radius: 10px 10px 0 0;
     .link {
       position: absolute;
       width: 100%;
@@ -545,22 +562,12 @@ img {
       -moz-transition: all 0.4s ease;
       -ms-transition: all 0.4s ease;
       transition: all 0.4s ease;
-      i {
-        display: block;
+      .icon {
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 50px;
-        height: 50px;
-        line-height: 46px;
-        font-size: 1.3em;
-        border: 2px solid #fff;
-        color: #fff;
-        text-align: center;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        border-radius: 50%;
+        width: 35px;
+        height: 35px;
         -webkit-transform: translate(-50%, -50%) rotate(270deg);
         -moz-transform: translate(-50%, -50%) rotate(270deg);
         -ms-transform: translate(-50%, -50%) rotate(270deg);
@@ -569,6 +576,16 @@ img {
         -moz-transition: all 0.4s ease;
         -ms-transition: all 0.4s ease;
         transition: all 0.4s ease;
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          border: 2px solid #fff;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          border-radius: 50%;
+        }
       }
     }
     img {
@@ -586,7 +603,7 @@ img {
       }
       .link {
         opacity: 1;
-        i {
+        .icon {
           -webkit-transform: translate(-50%, -50%) rotate(0);
           -moz-transform: translate(-50%, -50%) rotate(0);
           -ms-transform: translate(-50%, -50%) rotate(0);
@@ -619,6 +636,7 @@ img {
     .note-card {
       text-align: justify;
       overflow: hidden;
+      height: 136px;
     }
   }
   @media (min-width: 1023px) {
@@ -770,6 +788,7 @@ img {
     }
     .item {
       border: none;
+      margin: 0;
       &:hover {
         background-color: transparent;
       }
