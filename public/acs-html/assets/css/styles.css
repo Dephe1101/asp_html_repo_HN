@@ -766,8 +766,10 @@ img {
   background-color: #1b4a1c;
   margin-top: 0;
   overflow: hidden; }
-  #footer span {
+  #footer a {
     color: white; }
+    #footer a:hover {
+      text-decoration: underline; }
   #footer .ct-footer .title_footer {
     font-size: 22px;
     border-bottom: 1px solid #fff;
@@ -785,6 +787,8 @@ img {
       color: white; }
   #footer .ct-footer .item {
     border: none; }
+    #footer .ct-footer .item:hover {
+      background-color: transparent; }
   #footer .ct-footer .code-schema-events {
     width: 100%;
     float: left;

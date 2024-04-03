@@ -740,9 +740,13 @@ img {
   background-color: #1b4a1c;
   margin-top: 0;
   overflow: hidden;
-  span {
+  a {
     color: white;
+    &:hover {
+      text-decoration: underline;
+    }
   }
+
   .ct-footer {
     .title_footer {
       font-size: 22px;
@@ -766,6 +770,9 @@ img {
     }
     .item {
       border: none;
+      &:hover {
+        background-color: transparent;
+      }
     }
     .code-schema-events {
       width: 100%;
