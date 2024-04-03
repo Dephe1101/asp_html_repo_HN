@@ -25,7 +25,9 @@ $desktop-width: 1024px;
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-
+.container {
+  max-width: 1200px;
+}
 body {
   min-height: 100vh;
   margin: 0;
@@ -41,7 +43,7 @@ body {
     sans-serif;
 }
 p {
-  margin: 0 0 10px;
+  margin: 0 0 3px;
 }
 a {
   text-decoration: none;
@@ -83,10 +85,24 @@ h4 {
 .d-none-dk {
   display: none;
 }
-
 .phantrang {
   text-align: center;
   margin: 20px 0;
+  justify-content: center;
+  span {
+    background: #009a4f;
+    color: #fff;
+    border: 1px solid #009a4f;
+    margin-right: 3px;
+    padding: 3px 8px;
+  }
+  a {
+    margin-right: 3px;
+    padding: 3px 11px;
+    background: #fff;
+    color: #009a4f;
+    border: 1px solid #009a4f;
+  }
 }
 header {
   background-color: rgba(255, 255, 255, 0.95);
@@ -257,7 +273,7 @@ section {
     margin-top: 50px;
     h2 {
       text-transform: uppercase;
-      font-size: 34px;
+      font-size: 29px;
       position: relative;
       margin-bottom: 30px;
       font-weight: 700;
@@ -454,6 +470,9 @@ section {
     textarea.form-control {
       height: 80px;
     }
+    input {
+      margin-bottom: 8px;
+    }
   }
 }
 .img_sidebar {
@@ -502,9 +521,17 @@ img {
   border: 1px solid #ddd;
   word-wrap: break-word;
   list-style: none;
+  box-shadow:
+    rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  border-radius: 10px;
+  &:hover {
+    background: #eee;
+  }
   .img {
     position: relative;
     overflow: hidden;
+    border-radius: 10px 10px 0 0;
     .link {
       position: absolute;
       width: 100%;
@@ -576,10 +603,14 @@ img {
       text-align: left;
       text-transform: uppercase;
       padding: 10px 0 15px;
-      text-align: center;
       height: 52px;
       overflow: hidden;
       color: #114831;
+      margin-bottom: 3px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2; /* number of lines to show */
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
       &:hover {
         color: #1f4286;
         text-decoration: underline;
@@ -615,7 +646,7 @@ img {
   .title-heading {
     h2 {
       text-transform: uppercase;
-      font-size: 34px;
+      font-size: 29px;
       position: relative;
       margin-bottom: 10px;
       font-weight: 700;
@@ -656,7 +687,7 @@ img {
       .nav-item {
         margin-left: 10px;
         .nav-link {
-          font-weight: normal;
+          font-weight: 700;
           background: #fff !important;
           border-radius: 4px;
           padding: 5px 16px;
@@ -664,6 +695,7 @@ img {
           color: #1b4a1c;
           border: 1px solid #1b4a1c !important;
           text-transform: uppercase;
+          font-size: 15px;
         }
         .active {
           background: #1b4a1c !important;

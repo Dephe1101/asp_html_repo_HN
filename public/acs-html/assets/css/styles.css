@@ -16,6 +16,9 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555; }
 
+.container {
+  max-width: 1200px; }
+
 body {
   min-height: 100vh;
   margin: 0;
@@ -28,7 +31,7 @@ body {
   font: 16px/1.7 Arial, Helvetica, sans-serif; }
 
 p {
-  margin: 0 0 10px; }
+  margin: 0 0 3px; }
 
 a {
   text-decoration: none;
@@ -69,7 +72,20 @@ h4 {
 
 .phantrang {
   text-align: center;
-  margin: 20px 0; }
+  margin: 20px 0;
+  justify-content: center; }
+  .phantrang span {
+    background: #009a4f;
+    color: #fff;
+    border: 1px solid #009a4f;
+    margin-right: 3px;
+    padding: 3px 8px; }
+  .phantrang a {
+    margin-right: 3px;
+    padding: 3px 11px;
+    background: #fff;
+    color: #009a4f;
+    border: 1px solid #009a4f; }
 
 header {
   background-color: rgba(255, 255, 255, 0.95);
@@ -202,7 +218,7 @@ section {
   margin-top: 50px; }
   #main-content .title-heading h2 {
     text-transform: uppercase;
-    font-size: 34px;
+    font-size: 29px;
     position: relative;
     margin-bottom: 30px;
     font-weight: 700;
@@ -359,6 +375,8 @@ section {
     color: #ff0; }
   .form_tuvan .form_tuvan_content textarea.form-control {
     height: 80px; }
+  .form_tuvan .form_tuvan_content input {
+    margin-bottom: 8px; }
 
 .img_sidebar {
   margin-top: 15px; }
@@ -402,10 +420,15 @@ img {
 .item {
   border: 1px solid #ddd;
   word-wrap: break-word;
-  list-style: none; }
+  list-style: none;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  border-radius: 10px; }
+  .item:hover {
+    background: #eee; }
   .item .img {
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    border-radius: 10px 10px 0 0; }
     .item .img .link {
       position: absolute;
       width: 100%;
@@ -468,10 +491,15 @@ img {
       text-align: left;
       text-transform: uppercase;
       padding: 10px 0 15px;
-      text-align: center;
       height: 52px;
       overflow: hidden;
-      color: #114831; }
+      color: #114831;
+      margin-bottom: 3px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      /* number of lines to show */
+      line-clamp: 2;
+      -webkit-box-orient: vertical; }
       .item .card-body .title-card:hover {
         color: #1f4286;
         text-decoration: underline; }
@@ -510,7 +538,7 @@ img {
 #bang-bao-gia .title-heading h2,
 #cam-ket .title-heading h2 {
   text-transform: uppercase;
-  font-size: 34px;
+  font-size: 29px;
   position: relative;
   margin-bottom: 10px;
   font-weight: 700;
@@ -610,14 +638,15 @@ img {
     #danh-gia .content .nav-tabs .nav-item .nav-link,
     #bang-bao-gia .content .nav-tabs .nav-item .nav-link,
     #cam-ket .content .nav-tabs .nav-item .nav-link {
-      font-weight: normal;
+      font-weight: 700;
       background: #fff !important;
       border-radius: 4px;
       padding: 5px 16px;
       margin-bottom: 5px;
       color: #1b4a1c;
       border: 1px solid #1b4a1c !important;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      font-size: 15px; }
     #cong-trinh-tieu-bieu .content .nav-tabs .nav-item .active,
     #xay-dung-nha .content .nav-tabs .nav-item .active,
     #sua-chua-nha .content .nav-tabs .nav-item .active,
