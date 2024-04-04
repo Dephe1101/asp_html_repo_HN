@@ -19,6 +19,27 @@
 .container {
   max-width: 1200px; }
 
+#myBtn {
+  position: fixed;
+  display: none;
+  z-index: 999;
+  bottom: 100px;
+  right: 5px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #009a4f;
+  color: #fff;
+  font-size: 26px;
+  line-height: 40px;
+  text-align: center;
+  opacity: 0.8; }
+  #myBtn img {
+    width: 100%;
+    height: 100%; }
+  #myBtn:hover {
+    opacity: 1; }
+
 body {
   min-height: 100vh;
   margin: 0;
@@ -30,6 +51,21 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   box-sizing: border-box; }
+
+.contact input[type="submit"] {
+  border: none;
+  cursor: pointer;
+  outline: 0;
+  font-weight: 700;
+  margin-left: 90px;
+  width: auto;
+  background-color: #000;
+  color: #fff;
+  padding: 7px 14px;
+  font-family: "Roboto Condensed", sans-serif;
+  transition: all 0.3s ease;
+  font-size: 15px;
+  margin-bottom: 0; }
 
 p {
   margin: 0 0 3px; }
@@ -69,10 +105,12 @@ h4 {
   overflow: hidden;
   padding-bottom: 10px;
   margin-bottom: 10px; }
-  .item-news .descr h3 {
-    text-transform: uppercase;
-    margin-bottom: 8px;
-    line-height: 0.9em; }
+  .item-news .col-9 {
+    padding-left: 0; }
+    .item-news .col-9 .descr h3 {
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      line-height: 0.9em; }
 
 .headline {
   margin-top: 5rem; }
@@ -97,13 +135,23 @@ h4 {
     color: #009a4f;
     border: 1px solid #009a4f; }
 
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: none; }
+
 header {
   background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.08); }
   @media (max-width: 810px) {
-    header .navbar-brand-hide {
-      display: block !important;
-      width: 150px; } }
+    header .navbar {
+      background-color: #078844; }
+      header .navbar .navbar-brand-hide {
+        display: block !important;
+        width: 150px; }
+      header .navbar .navbar-toggler {
+        border: none;
+        color: #fff; } }
   header #navbarNav .nav-main {
     position: relative; }
     header #navbarNav .nav-main .nav-item {
@@ -114,7 +162,11 @@ header {
         color: #333333;
         font-weight: 600;
         text-decoration: none;
-        font-size: 15px; }
+        font-size: 15px;
+        color: black; }
+        @media (max-width: 564px) {
+          header #navbarNav .nav-main .nav-item .nav-link {
+            color: white; } }
         header #navbarNav .nav-main .nav-item .nav-link:hover {
           color: #da2028; }
       header #navbarNav .nav-main .nav-item .navbar-brand img {
@@ -143,12 +195,40 @@ header {
           border: none;
           background: green;
           color: #fff;
-          padding: 6.5px 20px;
+          padding: 7px 20px;
           display: block;
           width: 61px; }
     header #navbarNav .nav-main .dropdown-menu {
       box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
       border: none; }
+
+.btn-search-reponsive .btn_search_mobile_top_reponsive {
+  color: #fff;
+  padding: 3px;
+  border: none;
+  -webkit-appearance: button;
+  cursor: pointer;
+  width: 30px;
+  height: 30px; }
+
+.search_reponsive {
+  display: none;
+  padding-top: 22px;
+  width: 300px;
+  position: absolute;
+  right: 0;
+  top: 33px;
+  z-index: 99999; }
+  .search_reponsive .search-form-reponsive .btn_search_reponsive {
+    position: absolute;
+    top: 22px;
+    right: 0;
+    border: none;
+    background: green;
+    color: #fff;
+    padding: 8px 20px;
+    display: block;
+    width: 61px; }
 
 #content-anh .item {
   margin-bottom: 30px;
@@ -236,7 +316,6 @@ section {
     text-transform: uppercase;
     font-size: 29px;
     position: relative;
-    margin-bottom: 30px;
     font-weight: 700;
     text-align: center;
     padding-bottom: 0;
@@ -447,6 +526,9 @@ img {
   list-style: none;
   margin-right: 10px;
   margin-bottom: 30px; }
+  @media (max-width: 564px) {
+    .item {
+      margin-right: 0; } }
   .item:hover {
     background: #eee; }
   .item .img {
@@ -635,8 +717,7 @@ img {
 #danh-gia .content .nav-tabs,
 #bang-bao-gia .content .nav-tabs,
 #cam-ket .content .nav-tabs {
-  border: none;
-  overflow-x: scroll; }
+  border: none; }
   #cong-trinh-tieu-bieu .content .nav-tabs .nav-item,
   #xay-dung-nha .content .nav-tabs .nav-item,
   #sua-chua-nha .content .nav-tabs .nav-item,

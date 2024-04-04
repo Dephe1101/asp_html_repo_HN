@@ -39,15 +39,29 @@
     <header class="site-header sticky-top">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <a class="navbar-brand-hide d-none" href="./index.html">
                     <img loading="lazy"
                         src="https://minhbao.vn/wp-content/uploads/2020/09/Logo-kh%C3%B4ng-n%E1%BB%81n-300x80.png"
                         alt="ACS VIỆT NAM">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <div class="btn-search-reponsive">
+                    <li class="nav-item ms-4 ">
+                        <div type="button" class="btn_search_mobile_top_reponsive">
+                            <img class="" src="./assets/images/icon-search.svg"></img></div>
+                        <div class="search_reponsive search_mobile_reponsive" id="btn_search_mobile">
+                            <form role="search" method="get" class="search-form-reponsive" action="https://minhbao.vn/">
+                                <input type="text" name="s" id="s" placeholder="Nhập từ khóa" class="form-control" />
+                                <button class="btn_search_reponsive"><img
+                                        src="./assets/images/icon-search.svg"></img></button>
+                            </form>
+                        </div>
+                    </li>
+                </div>
+
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="nav-main navbar-nav">
                         <li class="nav-item dropdown">
@@ -131,7 +145,7 @@
                             <a class="nav-link active" aria-current="page" href="./lien-he.html">LIÊN HỆ</a>
                         </li>
                         <li class="nav-item ms-4 ">
-                            <div type="button" onclick="btnSearch()" class="btn_search_mobile_top d-none d-lg-block">
+                            <div type="button" class="btn_search_mobile_top d-none d-lg-block">
                                 <img class="" src="./assets/images/icon-search.svg"></img></div>
                             <div class="search search_mobile" id="btn_search_mobile">
                                 <form role="search" method="get" class="search-form" action="https://minhbao.vn/">
@@ -183,24 +197,24 @@
             <h2 class="text-center">
                 BẢNG BÁO GIÁ
             </h2>
-            <div class="line_f mb-5"></div>
+            <div class="line_f mb-3"></div>
             <div class="row">
                 <div class="col-md-3 mb-3">
                     <a href="./tin-tuc-detail.html "><img
                             src="https://minhbao.vn/wp-content/uploads/2020/12/bang-bao-gia-xay-nha-tron-goi.jpg"
                             alt="Báo Giá Xây Nhà Trọn Gói 2024 | Công Ty Xây Dựng Uy Tín Hơn 13 Năm Kinh Nghiệm " /></a>
                 </div>
-                <div class="col-md-3  mb-3">
+                <div class="col-md-3 mb-3">
                     <a href="./tin-tuc-detail.html "><img
                             src="https://minhbao.vn/wp-content/uploads/2020/10/bang-bao-gia-thi-cong-2.jpg"
                             alt="Bảng Báo Giá Xây Nhà Phần Thô Năm 2023 Mới Nhất " /></a>
                 </div>
-                <div class="col-md-3  mb-3">
+                <div class="col-md-3 mb-3">
                     <a href="./tin-tuc-detail.html "><img
                             src="https://minhbao.vn/wp-content/uploads/2020/01/bang-bao-gia-sua-chua-nha.jpg"
                             alt="Đơn Giá Sửa Chữa Nhà Chuyên Nghiệp Tại HCM " /></a>
                 </div>
-                <div class="col-md-3  mb-3">
+                <div class="col-md-3 ">
                     <a href="./tin-tuc-detail.html "><img
                             src="https://minhbao.vn/wp-content/uploads/2020/01/bao-gia-thiet-ke-kien-truc.jpg"
                             alt="ĐƠN GIÁ THIẾT KẾ KIẾN TRÚC NHÀ PHỐ " /></a>
@@ -1011,7 +1025,7 @@
             </div>
             <div class="single-project mt-4">
                 <div class="row">
-                    <div class="col-md-3  mb-3">
+                    <div class="col-md-3 ">
                         <div class="item ">
                             <div class="img">
                                 <img class="lazy"
@@ -1034,7 +1048,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3  mb-3">
+                    <div class="col-md-3 ">
                         <div class="item ">
                             <div class="img">
                                 <img class="lazy"
@@ -1057,7 +1071,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3  mb-3">
+                    <div class="col-md-3 ">
                         <div class="item ">
                             <div class="img">
                                 <img class="lazy"
@@ -1080,7 +1094,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3  mb-3">
+                    <div class="col-md-3 ">
                         <div class="item ">
                             <div class="img">
                                 <img class="lazy"
@@ -1107,7 +1121,7 @@
             </div>
             <div class="single-project mt-1">
                 <div class="row">
-                    <div class="col-md-3  mb-3">
+                    <div class="col-md-3 ">
                         <div class="item ">
                             <div class="img">
                                 <img class="lazy"
@@ -1130,7 +1144,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3  mb-3">
+                    <div class="col-md-3 ">
                         <div class="item ">
                             <div class="img">
                                 <img class="lazy"
@@ -1153,7 +1167,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3  mb-3">
+                    <div class="col-md-3 ">
                         <div class="item ">
                             <div class="img">
                                 <img class="lazy"
@@ -1176,7 +1190,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3  mb-3">
+                    <div class="col-md-3 ">
                         <div class="item ">
                             <div class="img">
                                 <img class="lazy"
@@ -1262,7 +1276,7 @@
                     <div class="tab-pane fade show active" id="hai" role="tabpanel" aria-labelledby="hai-tang">
                         <div class="single-project mt-4">
                             <div class="row">
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -1285,7 +1299,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -1308,7 +1322,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -1331,7 +1345,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -1358,7 +1372,7 @@
                         </div>
                         <div class="single-project mt-1">
                             <div class="row">
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -1381,7 +1395,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -1404,7 +1418,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -1427,7 +1441,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -1456,7 +1470,7 @@
                     <div class="tab-pane fade" id="ba" role="tabpanel" aria-labelledby="ba-tang">
                         <div class="single-project mt-4">
                             <div class="row">
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -1480,7 +1494,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -1504,7 +1518,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -1528,7 +1542,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -1556,7 +1570,7 @@
                         </div>
                         <div class="single-project mt-1">
                             <div class="row">
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -1580,7 +1594,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -1604,7 +1618,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -1628,7 +1642,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -1658,7 +1672,7 @@
                     <div class="tab-pane fade" id="bon" role="tabpanel" aria-labelledby="bon-tang">
                         <div class="single-project mt-4">
                             <div class="row">
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -1682,7 +1696,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -1706,7 +1720,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -1730,7 +1744,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -1758,7 +1772,7 @@
                         </div>
                         <div class="single-project mt-1">
                             <div class="row">
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -1782,7 +1796,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -1806,7 +1820,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -1830,7 +1844,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -1860,7 +1874,7 @@
                     <div class="tab-pane fade" id="nam" role="tabpanel" aria-labelledby="nam-tang">
                         <div class="single-project mt-4">
                             <div class="row">
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -1883,7 +1897,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -1906,7 +1920,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -1929,7 +1943,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -1956,7 +1970,7 @@
                         </div>
                         <div class="single-project mt-1">
                             <div class="row">
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -1979,7 +1993,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -2002,7 +2016,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -2025,7 +2039,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -2054,7 +2068,7 @@
                     <div class="tab-pane fade" id="bietthu" role="tabpanel" aria-labelledby="biet-thu">
                         <div class="single-project mt-4">
                             <div class="row">
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -2078,7 +2092,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -2102,7 +2116,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -2126,7 +2140,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -2154,7 +2168,7 @@
                         </div>
                         <div class="single-project mt-1">
                             <div class="row">
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -2178,7 +2192,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -2202,7 +2216,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -2226,7 +2240,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -2256,7 +2270,7 @@
                     <div class="tab-pane fade" id="cap4" role="tabpanel" aria-labelledby="cap-4">
                         <div class="single-project mt-4">
                             <div class="row">
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -2279,7 +2293,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -2302,7 +2316,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -2325,7 +2339,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -2352,7 +2366,7 @@
                         </div>
                         <div class="single-project mt-1">
                             <div class="row">
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -2375,7 +2389,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -2398,7 +2412,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -2421,7 +2435,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -2450,7 +2464,7 @@
                     <div class="tab-pane fade" id="mauNhaKhac" role="tabpanel" aria-labelledby="mau-nha-khac">
                         <div class="single-project mt-4">
                             <div class="row">
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -2474,7 +2488,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -2498,7 +2512,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -2522,7 +2536,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -2550,7 +2564,7 @@
                         </div>
                         <div class="single-project mt-1">
                             <div class="row">
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -2574,7 +2588,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -2598,7 +2612,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -2622,7 +2636,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3  mb-3">
+                                <div class="col-md-3 ">
                                     <div class="item ">
                                         <div class="img">
                                             <img class="lazy"
@@ -3455,9 +3469,9 @@
                 </h2>
                 <div class="line_f"></div>
             </div>
-            <div class="single-project mt-1">
+            <div class="single-project mt-4">
                 <div class="row">
-                    <div class="col-md-3 mt-3">
+                    <div class="col-md-3 ">
                         <div class="item ">
                             <div class="video-view">
                                 <a href="https://www.youtube.com/embed/vy23-kg8jSA" class="link fancybox"
@@ -3475,7 +3489,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 mt-3">
+                    <div class="col-md-3 ">
                         <div class="item ">
                             <div class="video-view">
                                 <a href="https://www.youtube.com/embed/vy23-kg8jSA" class="link fancybox"
@@ -3493,7 +3507,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 mt-3">
+                    <div class="col-md-3 ">
                         <div class="item ">
                             <div class="video-view">
                                 <a href="https://www.youtube.com/embed/vy23-kg8jSA" class="link fancybox"
@@ -3511,7 +3525,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 mt-3">
+                    <div class="col-md-3 ">
                         <div class="item ">
                             <div class="video-view">
                                 <a href="https://www.youtube.com/embed/vy23-kg8jSA" class="link fancybox"
@@ -3531,7 +3545,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-3 mt-3">
+                    <div class="col-md-3 ">
                         <div class="item ">
                             <div class="video-view">
                                 <a href="https://www.youtube.com/embed/vy23-kg8jSA" class="link fancybox"
@@ -3549,7 +3563,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 mt-3">
+                    <div class="col-md-3 ">
                         <div class="item ">
                             <div class="video-view">
                                 <a href="https://www.youtube.com/embed/vy23-kg8jSA" class="link fancybox"
@@ -3567,7 +3581,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 mt-3">
+                    <div class="col-md-3 ">
                         <div class="item ">
                             <div class="video-view">
                                 <a href="https://www.youtube.com/embed/vy23-kg8jSA" class="link fancybox"
@@ -3585,7 +3599,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 mt-3">
+                    <div class="col-md-3 ">
                         <div class="item ">
                             <div class="video-view">
                                 <a href="https://www.youtube.com/embed/vy23-kg8jSA" class="link fancybox"
@@ -3605,7 +3619,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-3 mt-3">
+                    <div class="col-md-3 ">
                         <div class="item ">
                             <div class="video-view">
                                 <a href="https://www.youtube.com/embed/vy23-kg8jSA" class="link fancybox"
@@ -3623,7 +3637,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 mt-3">
+                    <div class="col-md-3 ">
                         <div class="item ">
                             <div class="video-view">
                                 <a href="https://www.youtube.com/embed/vy23-kg8jSA" class="link fancybox"
@@ -3641,7 +3655,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 mt-3">
+                    <div class="col-md-3 ">
                         <div class="item ">
                             <div class="video-view">
                                 <a href="https://www.youtube.com/embed/vy23-kg8jSA" class="link fancybox"
@@ -3659,7 +3673,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 mt-3">
+                    <div class="col-md-3 ">
                         <div class="item ">
                             <div class="video-view">
                                 <a href="https://www.youtube.com/embed/vy23-kg8jSA" class="link fancybox"
@@ -3847,8 +3861,8 @@
     <footer id="footer" class="clearfix">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <div class="ct-footer mb-3">
+                <div class="col-md-4 mb-3">
+                    <div class="ct-footer">
                         <div class="title_footer">Thông tin liên hệ</div>
                         <h3>CÔNG TY CỔ PHẦN THIẾT KẾ XÂY DỰNG MINH BẢO</h3>
                         <p><strong>Trụ sở chính:</strong> Số 319 Tây Thạnh, Phường Tây Thạnh, Quận Tân Phú, TP. HCM</p>
@@ -3879,7 +3893,7 @@
                             &#8211; Email: info@minhbao.vn</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mb-3">
                     <div class="ct-footer">
                         <div class="title_footer">Thông tin dịch vụ</div>
                         <ul class="menu_bottom p-0">
@@ -4105,6 +4119,41 @@
         <a class="icon_messager" href="https://m.me/XAYDUNGMINHBAO" rel="nofollow" target="_blank"><img loading="lazy"
                 src="https://minhbao.vn/wp-content/themes/minhbao/images/i_messenger.png" alt="" /></a>
     </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"
+        integrity="sha512-nhY06wKras39lb9lRO76J4397CH1XpRSLfLJSftTeo3+q2vP7PaebILH9TqH+GRpnOhfAGjuYMVmVTOZJ+682w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+
+    <button class="btn" onclick="topFunction()" id="myBtn"><img src="./assets/images/double-up.svg" /></button>
+
+    <script>
+        $(".btn_search_mobile_top_reponsive").on("click", function () {
+            $(".search_mobile_reponsive").toggle("slow");
+        });
+
+    </script>
+    <script>
+        let mybutton = document.getElementById("myBtn");
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "flex";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
 
@@ -4126,6 +4175,8 @@
         });
 
     </script>
+
+
 </body>
 
 </html>
