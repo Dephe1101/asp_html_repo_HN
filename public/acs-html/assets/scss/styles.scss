@@ -65,15 +65,26 @@ h4 {
   float: left;
   width: 70%;
 }
-.news-list .item_news {
+.news-list {
+  .item_news {
+    overflow: hidden;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+}
+.fancybox__footer {
+  display: none;
+}
+.item-news {
   overflow: hidden;
   padding-bottom: 10px;
   margin-bottom: 10px;
-  border-bottom: 1px solid #ccc;
   .descr {
     h3 {
       text-transform: uppercase;
       margin-bottom: 8px;
+      line-height: 0.9em;
     }
   }
 }
@@ -108,6 +119,7 @@ header {
   @media (max-width: 810px) {
     .navbar-brand-hide {
       display: block !important;
+      width: 200px;
     }
   }
   #navbarNav {
@@ -132,15 +144,14 @@ header {
           }
         }
         .btn_search_mobile_top {
-          i {
-            background: #078844;
-            padding: 5px;
-          }
           color: #fff;
-          padding: 0 0 0 7px;
+          padding: 3px;
           border: none;
           -webkit-appearance: button;
           cursor: pointer;
+          background-color: green;
+          width: 30px;
+          height: 30px;
         }
         .search {
           display: none;
@@ -153,12 +164,12 @@ header {
           .search-form {
             .btn_search {
               position: absolute;
-              top: 22px;
+              top: 23px;
               right: 0;
               border: none;
               background: green;
               color: #fff;
-              padding: 5px 20px;
+              padding: 6.5px 20px;
               display: block;
               width: 61px;
             }
@@ -644,6 +655,7 @@ img {
     }
   }
 }
+
 #cong-trinh-tieu-bieu,
 #xay-dung-nha,
 #sua-chua-nha,
@@ -700,6 +712,7 @@ img {
   .content {
     .nav-tabs {
       border: none;
+      overflow-x: scroll;
       .nav-item {
         margin-left: 10px;
         .nav-link {
@@ -916,102 +929,21 @@ img {
 }
 
 //mobile
-@media (max-width: 767px) {
+@media (max-width: 564px) {
   .d-none-dk {
     display: inherit;
   }
   .d-none-mb {
     display: none;
   }
-  #wrapper-content {
-    h4 {
-      font-size: 18px;
-    }
-    .head-title {
-      font-size: 25px;
-    }
-
-    .flex-ct-column {
-      flex-direction: column;
-    }
-
-    .flex-ct-row {
-      flex-direction: row;
-    }
-
-    .w-35 {
-      width: 100%;
-      margin-bottom: 10px;
-    }
-
-    .w-65 {
-      width: 100%;
-      text-align: center;
-    }
-
-    .box-banner {
-      padding: 30px 0 100px;
-      background-position: 37% 100%;
-      background-size: 180%;
-      min-height: 147px;
-      max-height: 147px;
-    }
-
-    .box-param-filter {
-      padding: 10px !important;
-
-      .content-filter {
-        font-size: 15px !important;
-
-        .btn-minus,
-        .btn-plus {
-          padding: 0;
-
-          button {
-            height: 30px !important;
-            width: 30px !important;
-            line-height: 16px;
-            font-size: 14px;
-            font-weight: 700;
-          }
-        }
-      }
-    }
-
-    .box-content-credit {
-      .ul-check {
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 10px;
-
-        .item-check {
-          width: 50%;
-          margin-bottom: 5px !important;
-        }
-      }
-    }
-
-    .box-detail-news {
-      padding: 0;
-
-      .detail-news {
-        padding: 0;
-
-        .title-detail {
-          font-size: 25px;
-          line-height: 32px;
-          padding-top: 10px;
-        }
-      }
-
-      .orther-news {
-        .item-orther-news {
-          img {
-            margin-bottom: 10px;
-          }
-
-          .item-orther-title {
-            padding-left: 0;
+  #thiet-ke-kien-truc-nha,
+  #vat-lieu-hoan-thien {
+    .content {
+      .nav-tabs {
+        .nav-item {
+          .nav-link {
+            font-size: 10px;
+            padding: 2px 3px;
           }
         }
       }

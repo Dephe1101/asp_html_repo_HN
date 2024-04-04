@@ -61,9 +61,18 @@ h4 {
   padding-bottom: 10px;
   margin-bottom: 10px;
   border-bottom: 1px solid #ccc; }
-  .news-list .item_news .descr h3 {
+
+.fancybox__footer {
+  display: none; }
+
+.item-news {
+  overflow: hidden;
+  padding-bottom: 10px;
+  margin-bottom: 10px; }
+  .item-news .descr h3 {
     text-transform: uppercase;
-    margin-bottom: 8px; }
+    margin-bottom: 8px;
+    line-height: 0.9em; }
 
 .headline {
   margin-top: 5rem; }
@@ -93,7 +102,8 @@ header {
   box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.08); }
   @media (max-width: 810px) {
     header .navbar-brand-hide {
-      display: block !important; } }
+      display: block !important;
+      width: 200px; } }
   header #navbarNav .nav-main {
     position: relative; }
     header #navbarNav .nav-main .nav-item {
@@ -111,13 +121,13 @@ header {
         width: 200px; }
       header #navbarNav .nav-main .nav-item .btn_search_mobile_top {
         color: #fff;
-        padding: 0 0 0 7px;
+        padding: 3px;
         border: none;
         -webkit-appearance: button;
-        cursor: pointer; }
-        header #navbarNav .nav-main .nav-item .btn_search_mobile_top i {
-          background: #078844;
-          padding: 5px; }
+        cursor: pointer;
+        background-color: green;
+        width: 30px;
+        height: 30px; }
       header #navbarNav .nav-main .nav-item .search {
         display: none;
         padding-top: 22px;
@@ -128,12 +138,12 @@ header {
         z-index: 99999; }
         header #navbarNav .nav-main .nav-item .search .search-form .btn_search {
           position: absolute;
-          top: 22px;
+          top: 23px;
           right: 0;
           border: none;
           background: green;
           color: #fff;
-          padding: 5px 20px;
+          padding: 6.5px 20px;
           display: block;
           width: 61px; }
     header #navbarNav .nav-main .dropdown-menu {
@@ -625,7 +635,8 @@ img {
 #danh-gia .content .nav-tabs,
 #bang-bao-gia .content .nav-tabs,
 #cam-ket .content .nav-tabs {
-  border: none; }
+  border: none;
+  overflow-x: scroll; }
   #cong-trinh-tieu-bieu .content .nav-tabs .nav-item,
   #xay-dung-nha .content .nav-tabs .nav-item,
   #sua-chua-nha .content .nav-tabs .nav-item,
@@ -904,64 +915,15 @@ img {
   height: 300px;
   overflow-y: scroll; }
 
-@media (max-width: 767px) {
+@media (max-width: 564px) {
   .d-none-dk {
     display: inherit; }
   .d-none-mb {
     display: none; }
-  #wrapper-content h4 {
-    font-size: 18px; }
-  #wrapper-content .head-title {
-    font-size: 25px; }
-  #wrapper-content .flex-ct-column {
-    flex-direction: column; }
-  #wrapper-content .flex-ct-row {
-    flex-direction: row; }
-  #wrapper-content .w-35 {
-    width: 100%;
-    margin-bottom: 10px; }
-  #wrapper-content .w-65 {
-    width: 100%;
-    text-align: center; }
-  #wrapper-content .box-banner {
-    padding: 30px 0 100px;
-    background-position: 37% 100%;
-    background-size: 180%;
-    min-height: 147px;
-    max-height: 147px; }
-  #wrapper-content .box-param-filter {
-    padding: 10px !important; }
-    #wrapper-content .box-param-filter .content-filter {
-      font-size: 15px !important; }
-      #wrapper-content .box-param-filter .content-filter .btn-minus,
-      #wrapper-content .box-param-filter .content-filter .btn-plus {
-        padding: 0; }
-        #wrapper-content .box-param-filter .content-filter .btn-minus button,
-        #wrapper-content .box-param-filter .content-filter .btn-plus button {
-          height: 30px !important;
-          width: 30px !important;
-          line-height: 16px;
-          font-size: 14px;
-          font-weight: 700; }
-  #wrapper-content .box-content-credit .ul-check {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 10px; }
-    #wrapper-content .box-content-credit .ul-check .item-check {
-      width: 50%;
-      margin-bottom: 5px !important; }
-  #wrapper-content .box-detail-news {
-    padding: 0; }
-    #wrapper-content .box-detail-news .detail-news {
-      padding: 0; }
-      #wrapper-content .box-detail-news .detail-news .title-detail {
-        font-size: 25px;
-        line-height: 32px;
-        padding-top: 10px; }
-    #wrapper-content .box-detail-news .orther-news .item-orther-news img {
-      margin-bottom: 10px; }
-    #wrapper-content .box-detail-news .orther-news .item-orther-news .item-orther-title {
-      padding-left: 0; } }
+  #thiet-ke-kien-truc-nha .content .nav-tabs .nav-item .nav-link,
+  #vat-lieu-hoan-thien .content .nav-tabs .nav-item .nav-link {
+    font-size: 10px;
+    padding: 2px 3px; } }
 
 @keyframes ring-alo-circle-anim {
   0% {
