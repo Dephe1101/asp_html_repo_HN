@@ -103,7 +103,7 @@ header {
   @media (max-width: 810px) {
     header .navbar-brand-hide {
       display: block !important;
-      width: 200px; } }
+      width: 150px; } }
   header #navbarNav .nav-main {
     position: relative; }
     header #navbarNav .nav-main .nav-item {
