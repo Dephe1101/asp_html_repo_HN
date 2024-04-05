@@ -78,6 +78,9 @@ body {
   transition: all 0.3s ease;
   font-size: 15px;
   margin-bottom: 0;
+  &:hover {
+    background-color: #009a4f;
+  }
 }
 p {
   margin: 0 0 3px;
@@ -115,10 +118,13 @@ h4 {
 .fancybox__footer {
   display: none;
 }
+.navbar-nav {
+  .dropdown-menu {
+    position: absolute;
+  }
+}
 .item-news {
   overflow: hidden;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
   .col-9 {
     padding-left: 0;
     .descr {
@@ -399,6 +405,9 @@ section {
     overflow: hidden;
     border: 1px solid #078844;
     padding: 20px;
+    .row {
+      margin-bottom: 15px;
+    }
   }
   #ketquatinh {
     background: #edf6ff;
@@ -725,7 +734,7 @@ img {
       text-align: left;
       text-transform: uppercase;
       padding: 10px 0 15px;
-      height: 52px;
+      height: 50px;
       overflow: hidden;
       color: #114831;
       margin-bottom: 3px;
@@ -739,6 +748,7 @@ img {
       }
     }
     .note-card {
+      margin-top: 5px;
       text-align: justify;
       overflow: hidden;
       height: 136px;
@@ -748,6 +758,17 @@ img {
     .img {
       overflow: hidden;
       height: 185px;
+    }
+  }
+}
+
+@media (max-width: 564px) {
+  #tinh-phi {
+    .tienich :nth-child(3),
+    :nth-child(4),
+    :nth-child(5),
+    :nth-child(6) {
+      margin-top: 0 !important;
     }
   }
 }
@@ -780,6 +801,15 @@ img {
       position: relative;
       margin-top: 0;
       text-align: center;
+    }
+  }
+  .entry {
+    @media (max-width: 564px) {
+      .tienich :nth-child(2),
+      :nth-child(3),
+      :nth-child(4) {
+        margin-top: 0 !important;
+      }
     }
   }
   .single-project {

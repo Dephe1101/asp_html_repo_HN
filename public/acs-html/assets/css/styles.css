@@ -66,6 +66,8 @@ body {
   transition: all 0.3s ease;
   font-size: 15px;
   margin-bottom: 0; }
+  .contact input[type="submit"]:hover {
+    background-color: #009a4f; }
 
 p {
   margin: 0 0 3px; }
@@ -101,10 +103,11 @@ h4 {
 .fancybox__footer {
   display: none; }
 
+.navbar-nav .dropdown-menu {
+  position: absolute; }
+
 .item-news {
-  overflow: hidden;
-  padding-bottom: 10px;
-  margin-bottom: 10px; }
+  overflow: hidden; }
   .item-news .col-9 {
     padding-left: 0; }
     .item-news .col-9 .descr h3 {
@@ -328,6 +331,8 @@ section {
   overflow: hidden;
   border: 1px solid #078844;
   padding: 20px; }
+  #main-content .form_tienich .row {
+    margin-bottom: 15px; }
 
 #main-content #ketquatinh {
   background: #edf6ff;
@@ -595,7 +600,7 @@ img {
       text-align: left;
       text-transform: uppercase;
       padding: 10px 0 15px;
-      height: 52px;
+      height: 50px;
       overflow: hidden;
       color: #114831;
       margin-bottom: 3px;
@@ -608,6 +613,7 @@ img {
         color: #1f4286;
         text-decoration: underline; }
     .item .card-body .note-card {
+      margin-top: 5px;
       text-align: justify;
       overflow: hidden;
       height: 136px; }
@@ -615,6 +621,13 @@ img {
     .item .img {
       overflow: hidden;
       height: 185px; } }
+
+@media (max-width: 564px) {
+  #tinh-phi .tienich :nth-child(3),
+  #tinh-phi :nth-child(4),
+  #tinh-phi :nth-child(5),
+  #tinh-phi :nth-child(6) {
+    margin-top: 0 !important; } }
 
 #cong-trinh-tieu-bieu img,
 #xay-dung-nha img,
@@ -653,6 +666,45 @@ img {
   position: relative;
   margin-top: 0;
   text-align: center; }
+
+@media (max-width: 564px) {
+  #cong-trinh-tieu-bieu .entry .tienich :nth-child(2),
+  #cong-trinh-tieu-bieu .entry :nth-child(3),
+  #cong-trinh-tieu-bieu .entry :nth-child(4),
+  #xay-dung-nha .entry .tienich :nth-child(2),
+  #xay-dung-nha .entry :nth-child(3),
+  #xay-dung-nha .entry :nth-child(4),
+  #sua-chua-nha .entry .tienich :nth-child(2),
+  #sua-chua-nha .entry :nth-child(3),
+  #sua-chua-nha .entry :nth-child(4),
+  #nang-cap-nha .entry .tienich :nth-child(2),
+  #nang-cap-nha .entry :nth-child(3),
+  #nang-cap-nha .entry :nth-child(4),
+  #thiet-ke-kien-truc-nha .entry .tienich :nth-child(2),
+  #thiet-ke-kien-truc-nha .entry :nth-child(3),
+  #thiet-ke-kien-truc-nha .entry :nth-child(4),
+  #vat-lieu-hoan-thien .entry .tienich :nth-child(2),
+  #vat-lieu-hoan-thien .entry :nth-child(3),
+  #vat-lieu-hoan-thien .entry :nth-child(4),
+  #cam-nang-xay-nha .entry .tienich :nth-child(2),
+  #cam-nang-xay-nha .entry :nth-child(3),
+  #cam-nang-xay-nha .entry :nth-child(4),
+  #tinh-chi-phi-xay-dung .entry .tienich :nth-child(2),
+  #tinh-chi-phi-xay-dung .entry :nth-child(3),
+  #tinh-chi-phi-xay-dung .entry :nth-child(4),
+  #hoat-dong .entry .tienich :nth-child(2),
+  #hoat-dong .entry :nth-child(3),
+  #hoat-dong .entry :nth-child(4),
+  #danh-gia .entry .tienich :nth-child(2),
+  #danh-gia .entry :nth-child(3),
+  #danh-gia .entry :nth-child(4),
+  #bang-bao-gia .entry .tienich :nth-child(2),
+  #bang-bao-gia .entry :nth-child(3),
+  #bang-bao-gia .entry :nth-child(4),
+  #cam-ket .entry .tienich :nth-child(2),
+  #cam-ket .entry :nth-child(3),
+  #cam-ket .entry :nth-child(4) {
+    margin-top: 0 !important; } }
 
 #cong-trinh-tieu-bieu .single-project .video-view,
 #xay-dung-nha .single-project .video-view,
