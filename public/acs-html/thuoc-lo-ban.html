@@ -31,7 +31,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/loban.css" />
+    <link rel="stylesheet" type="text/css" src="css/loban.css" />
     <script type='text/javascript' src='./assets/js/iscroll.js'></script>
     <script type="text/javascript" src="./assets/js/jquery-1.7.2.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
@@ -184,176 +184,28 @@
                     <div class="col-md-9">
                         <div id="main" style="margin: 0 -2px">
                             <div class="container-thuoc-lo-ban">
-                                <script type="text/javascript">
-                                    //Mỗi đoạn thước dài 1000mm
-                                    var rulerLength = 1000; //Số đo 1 đoạn thước (mm)
-                                    var trimStart = 0; //Số đo đầu của thước (mm)
-                                    var trimEnd = 1000; //Số đo cuối của thước (mm)
-
-                                    var myScroll;
-
-                                    function pullRightAction() {
-                                        if (trimStart > 0) {
-                                            $('#scroller').width(function (i, width) {
-                                                return width + 10000;
-                                            });
-                                            trimStart -= rulerLength;
-                                            var qStr = '?trimStart=' + trimStart + '&rulerLength=' + rulerLength;
-                                            var newLi = $('<li>').append($('<img/>', {
-                                                    src: 'https://minhbao.vn/wp-content/plugins/devvn-thuoc-lo-ban/includes/thuoc522.php' +
-                                                        qStr
-                                                }))
-                                                .append($('<img />', {
-                                                    src: 'https://minhbao.vn/wp-content/plugins/devvn-thuoc-lo-ban/includes/thuoc429.php' +
-                                                        qStr
-                                                }))
-                                                .append($('<img />', {
-                                                    src: "https://minhbao.vn/wp-content/plugins/devvn-thuoc-lo-ban/includes/thuoc388.php" +
-                                                        qStr
-                                                }));
-                                            $('#thelist').prepend(newLi);
-                                            myScroll.refresh();
-                                        }
-                                    }
-
-                                    function pullLeftAction() {
-                                        if (trimEnd < 100000) {
-                                            $('#scroller').width(function (i, width) {
-                                                return width + 10000;
-                                            });
-                                            var qStr = '?trimStart=' + trimEnd + '&rulerLength=' + rulerLength;
-                                            var newLi = $('<li>').append($('<img/>', {
-                                                    src: 'https://minhbao.vn/wp-content/plugins/devvn-thuoc-lo-ban/includes/thuoc522.php' +
-                                                        qStr
-                                                }))
-                                                .append($('<img />', {
-                                                    src: 'https://minhbao.vn/wp-content/plugins/devvn-thuoc-lo-ban/includes/thuoc429.php' +
-                                                        qStr
-                                                }))
-                                                .append($('<img />', {
-                                                    src: "https://minhbao.vn/wp-content/plugins/devvn-thuoc-lo-ban/includes/thuoc388.php" +
-                                                        qStr
-                                                }));
-                                            trimEnd += rulerLength;
-                                            $('#thelist').append(newLi);
-                                            myScroll.refresh();
-                                        }
-                                    }
-
-                                    function loaded() {
-                                        Math.nativeRound = Math.round;
-                                        Math.round = function (i, iDecimals) {
-                                            if (!iDecimals)
-                                                return Math.nativeRound(i);
-                                            else
-                                                return Math.nativeRound(i * Math.pow(10, Math.abs(iDecimals))) /
-                                                    Math.pow(10, Math.abs(
-                                                        iDecimals));
-
-                                        };
-
-                                        myScroll = new iScroll('wrapper', {
-                                            useTransition: true,
-                                            leftOffset: $('#pullRight').outerWidth(true),
-                                            onRefresh: function () {
-                                                if ($('#pullRight').hasClass('loading')) {
-                                                    $('#pullRight').removeClass('loading');
-                                                    $('#pullRight .pullRightLabel').html(
-                                                        'Kéo qua phải tải thêm...');
-                                                } else if ($('#pullLeft').hasClass('loading')) {
-                                                    $('#pullLeft').removeClass('loading');
-                                                    $('#pullLeft .pullLeftLabel').html(
-                                                        'Kéo qua trái tải thêm...');
-                                                }
-                                                $('#sodoLoban').html(Math.round((-this.x + 44 * 10) / 100,
-                                                    2) + ' cm').css({
-                                                    'left': $('.container-thuoc-lo-ban').outerWidth(
-                                                            true) / 2 -
-                                                        $('#sodoLoban')
-                                                        .outerWidth(true) / 2
-                                                });
-                                            },
-                                            onScrollMove: function () {
-                                                $('#sodoLoban').html(Math.round((-this.x + 44 * 10) / 100,
-                                                    2) + ' cm').css({
-                                                    'left': $('.container-thuoc-lo-ban').outerWidth(
-                                                            true) / 2 -
-                                                        $('#sodoLoban')
-                                                        .outerWidth(true) / 2
-                                                });
-                                            },
-                                            onScrollEnd: function () {
-                                                myScroll.refresh();
-                                                console.log(this.x);
-                                                console.log(($('#scroller').width() - 1000));
-                                                if (this.x > 5 && !$('#pullRight').hasClass('flip')) {
-                                                    $('#pullRight').addClass('flip');
-                                                    $('#pullRight .pullRightLabel').html(
-                                                        'Thả ra để làm mới...');
-                                                } else if (this.x < -($('#scroller').width() - 2000) && !$(
-                                                        '#pullRight')
-                                                    .hasClass('flip')) {
-                                                    $('#pullLeft').addClass('flip');
-                                                    $('#pullLeft .pullLeftLabel').html(
-                                                        'Thả ra để làm mới...');
-                                                }
-                                                //$('#abc').html('this.x='+this.x+' : out='+($('#scroller').width()-1000));
-                                                if ($('#pullRight').hasClass('flip')) {
-                                                    $('#pullRight').removeClass('flip');
-                                                    $('#pullRight').addClass('loading');
-                                                    $('#pullRight .pullRightLabel').html('Đang tải...');
-                                                    pullRightAction
-                                                        (); // Execute custom function (ajax call?)
-                                                } else if ($('#pullLeft').hasClass('flip')) {
-                                                    $('#pullLeft').removeClass('flip');
-                                                    $('#pullLeft').addClass('loading');
-                                                    $('#pullLeft .pullLeftLabel').html('Đang tải...');
-                                                    pullLeftAction
-                                                        (); // Execute custom function (ajax call?)
-                                                }
-                                                $('#sodoLoban').html(Math.round((-this.x + 44 * 10) / 100,
-                                                    2) + ' cm').css({
-                                                    'left': $('.container-thuoc-lo-ban').outerWidth(
-                                                            true) / 2 -
-                                                        $('#sodoLoban')
-                                                        .outerWidth(true) / 2
-                                                });
-                                            }
-                                        });
-
-                                        setTimeout(function () {
-                                            document.getElementById('wrapper').style.left = '0';
-                                        }, 800);
-                                    }
-                                    if (document.addEventListener) {
-                                        document.addEventListener('DOMContentLoaded', function () {
-                                            setTimeout(loaded, 200);
-                                        }, false);
-                                    } else {
-                                        document.attachEvent('onreadystatechange', function () {
-                                            setTimeout(loaded, 200);
-                                        });
-                                    }
-
-                                </script>
                                 <div class="content">
                                     <div id="lobanOuter" style="height:480px; margin-bottom: 30px;">
                                         <div id="abc"></div>
                                         <div id="sodoLoban"></div>
-                                        <div style="width:1px;height:425px;background:#ffa500;position:absolute;z-index:2;top:30px;left:
+                                        <div style="display: flex; justify-content: end;">
+                                            <input type="number" id="inputValue" value=""
+                                                onchange="scrollToValue(event)" placeholder="Nhập giá trị">
+                                        </div>
+                                        <div style="width:1px;height:455px;background:#ffa500;position:absolute;z-index:2;top:30px;left:
                                             50%;">
                                         </div>
-                                        <p style="position:absolute;z-index:2;top:16px;left:0; overflow-y: hidden;
+                                        <p style="position:absolute;z-index:2;top:43px;left:0; overflow-y: hidden;
                                                  height: 25px;">
                                             <strong>Thước Lỗ Ban
                                                 52.2cm:</strong> Khoảng
                                             không thông thủy (cửa, cửa sổ...)</p>
-                                        <p style="position:absolute;z-index:2;top:162px;left:0; overflow-y: hidden;
+                                        <p style="position:absolute;z-index:2;top:188px;left:0; overflow-y: hidden;
                                                 height: 25px;">
                                             <strong>Thước Lỗ Ban
                                                 42.9cm (Dương
                                                 trạch):</strong> Khối xây dựng (bếp, bệ, bậc...)</p>
-                                        <p style="position:absolute;z-index:2;top:308px;left:0;overflow-y: hidden; 
+                                        <p style="position:absolute;z-index:2;top:333px;left:0;overflow-y: hidden; 
                                                  height: 25px;">
                                             <strong>Thước Lỗ Ban
                                                 38.8cm (Âm
@@ -1102,6 +954,187 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+
+    </script>
+    <script type="text/javascript">
+        //Mỗi đoạn thước dài 1000mm
+        var rulerLength = 1000; //Số đo 1 đoạn thước (mm)
+        var trimStart = 0; //Số đo đầu của thước (mm)
+        var trimEnd = 1000; //Số đo cuối của thước (mm)
+
+        var myScroll;
+
+        function pullRightAction() {
+            if (trimStart > 0) {
+                $('#scroller').width(function (i, width) {
+                    return width + 10000;
+                });
+                trimStart -= rulerLength;
+                var qStr = '?trimStart=' + trimStart + '&rulerLength=' + rulerLength;
+                var newLi = $('<li>').append($('<img/>', {
+                        src: 'https://minhbao.vn/wp-content/plugins/devvn-thuoc-lo-ban/includes/thuoc522.php' +
+                            qStr
+                    }))
+                    .append($('<img />', {
+                        src: 'https://minhbao.vn/wp-content/plugins/devvn-thuoc-lo-ban/includes/thuoc429.php' +
+                            qStr
+                    }))
+                    .append($('<img />', {
+                        src: "https://minhbao.vn/wp-content/plugins/devvn-thuoc-lo-ban/includes/thuoc388.php" +
+                            qStr
+                    }));
+                $('#thelist').prepend(newLi);
+                myScroll.refresh();
+            }
+        }
+
+        function pullLeftAction() {
+            if (trimEnd < 100000) {
+                $('#scroller').width(function (i, width) {
+                    return width + 10000;
+                });
+                var qStr = '?trimStart=' + trimEnd + '&rulerLength=' + rulerLength;
+                var newLi = $('<li>').append($('<img/>', {
+                        src: 'https://minhbao.vn/wp-content/plugins/devvn-thuoc-lo-ban/includes/thuoc522.php' +
+                            qStr
+                    }))
+                    .append($('<img />', {
+                        src: 'https://minhbao.vn/wp-content/plugins/devvn-thuoc-lo-ban/includes/thuoc429.php' +
+                            qStr
+                    }))
+                    .append($('<img />', {
+                        src: "https://minhbao.vn/wp-content/plugins/devvn-thuoc-lo-ban/includes/thuoc388.php" +
+                            qStr
+                    }));
+                trimEnd += rulerLength;
+                $('#thelist').append(newLi);
+                myScroll.refresh();
+            }
+        }
+
+        function loaded() {
+            Math.nativeRound = Math.round;
+            Math.round = function (i, iDecimals) {
+                if (!iDecimals)
+                    return Math.nativeRound(i);
+                else
+                    return Math.nativeRound(i * Math.pow(10, Math.abs(iDecimals))) /
+                        Math.pow(10, Math.abs(
+                            iDecimals));
+
+            };
+
+            myScroll = new iScroll('wrapper', {
+                useTransition: true,
+                leftOffset: $('#pullRight').outerWidth(true),
+                onRefresh: function () {
+                    if ($('#pullRight').hasClass('loading')) {
+                        $('#pullRight').removeClass('loading');
+                        $('#pullRight .pullRightLabel').html(
+                            'Kéo qua phải tải thêm...');
+                    } else if ($('#pullLeft').hasClass('loading')) {
+                        $('#pullLeft').removeClass('loading');
+                        $('#pullLeft .pullLeftLabel').html(
+                            'Kéo qua trái tải thêm...');
+                    }
+                    $('#sodoLoban').html(Math.round((-this.x + 44 * 10) / 100,
+                        2) + ' cm').css({
+                        'left': $('.container-thuoc-lo-ban').outerWidth(
+                                true) / 2 -
+                            $('#sodoLoban')
+                            .outerWidth(true) / 2
+                    });
+                },
+                onScrollMove: function () {
+                    $('#sodoLoban').html(Math.round((-this.x + 44 * 10) / 100,
+                        2) + ' cm').css({
+                        'left': $('.container-thuoc-lo-ban').outerWidth(
+                                true) / 2 -
+                            $('#sodoLoban')
+                            .outerWidth(true) / 2
+                    });
+                },
+                onScrollEnd: function () {
+                    myScroll.refresh();
+                    console.log(this.x);
+                    console.log(($('#scroller').width() - 1000));
+                    if (this.x > 5 && !$('#pullRight').hasClass('flip')) {
+                        $('#pullRight').addClass('flip');
+                        $('#pullRight .pullRightLabel').html(
+                            'Thả ra để làm mới...');
+                    } else if (this.x < -($('#scroller').width() - 2000) && !$(
+                            '#pullRight')
+                        .hasClass('flip')) {
+                        $('#pullLeft').addClass('flip');
+                        $('#pullLeft .pullLeftLabel').html(
+                            'Thả ra để làm mới...');
+                    }
+                    //$('#abc').html('this.x='+this.x+' : out='+($('#scroller').width()-1000));
+                    if ($('#pullRight').hasClass('flip')) {
+                        $('#pullRight').removeClass('flip');
+                        $('#pullRight').addClass('loading');
+                        $('#pullRight .pullRightLabel').html('Đang tải...');
+                        pullRightAction
+                            (); // Execute custom function (ajax call?)
+                    } else if ($('#pullLeft').hasClass('flip')) {
+                        $('#pullLeft').removeClass('flip');
+                        $('#pullLeft').addClass('loading');
+                        $('#pullLeft .pullLeftLabel').html('Đang tải...');
+                        pullLeftAction
+                            (); // Execute custom function (ajax call?)
+                    }
+                    $('#sodoLoban').html(Math.round((-this.x + 44 * 10) / 100,
+                        2) + ' cm').css({
+                        'left': $('.container-thuoc-lo-ban').outerWidth(
+                                true) / 2 -
+                            $('#sodoLoban')
+                            .outerWidth(true) / 2
+                    });
+                },
+            });
+
+
+            setTimeout(function () {
+                document.getElementById('wrapper').style.left = '0';
+            }, 800);
+        }
+        if (document.addEventListener) {
+            document.addEventListener('DOMContentLoaded', function () {
+                setTimeout(loaded, 200);
+            }, false);
+        } else {
+            document.attachEvent('onreadystatechange', function () {
+                setTimeout(loaded, 200);
+            });
+        }
+
+        function scrollToValue(event) {
+            console.log(event.target.value);
+            var value = event.target.value
+            var result = -100 * value + 440
+            var loop = value / 100
+            if (value > 0 && value <= 500) {
+                document.getElementById("scroller").style.transitionDuration = "2000ms"
+            } else if (value > 500 && value <= 1500) {
+                document.getElementById("scroller").style.transitionDuration = "3000ms"
+            } else if (value > 1500 && value <= 3000) {
+                document.getElementById("scroller").style.transitionDuration = "4000ms"
+            } else if (value > 3000) {
+                document.getElementById("scroller").style.transitionDuration = "5000ms"
+            }
+            for (var i = 0; i < (Math.round(loop, 0)); i++) {
+                pullLeftAction()
+            }
+            $('#sodoLoban').html(Math.round((-result + 44 * 10) / 100,
+                2) + ' cm').css({
+                'left': $('.container-thuoc-lo-ban').outerWidth(
+                        true) / 2 -
+                    $('#sodoLoban')
+                    .outerWidth(true) / 2
+            });
+            document.getElementById("scroller").style.transform = `translate(${result}px, 0px) scale(1) translateZ(0px)`
+
+        }
 
     </script>
     <script>
