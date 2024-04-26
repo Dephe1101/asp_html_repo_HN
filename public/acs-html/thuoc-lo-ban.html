@@ -31,7 +31,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" type="text/css" src="css/loban.css" />
     <script type='text/javascript' src='./assets/js/iscroll.js'></script>
     <script type="text/javascript" src="./assets/js/jquery-1.7.2.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
@@ -187,10 +186,19 @@
                                 <div class="content">
                                     <div id="lobanOuter" style="height:480px; margin-bottom: 30px;">
                                         <div id="abc"></div>
-                                        <div id="sodoLoban"></div>
-                                        <div style="display: flex; justify-content: end;">
-                                            <input type="number" id="inputValue" value=""
-                                                onchange="scrollToValue(event)" placeholder="Nhập giá trị">
+                                        <div id="sodoLoban" style="display: none;"></div>
+                                        <div style="display: flex; justify-content: center; " class="inputLoBan">
+                                            <span style="padding-right: 5px"><button onclick="btnPlus() " style=" width: 30px;background-color: transparent;
+                                                    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67,
+                                                    0.15) 0px 1px 3px 1px; border-radius: 5px; "> +
+                                                </button></span>
+                                            <input style="width: 80px; border: 2px solid orange; color: red;
+                                                text-align: center;" id="inputValue" value="4.4"
+                                                onchange="scrollToValue(event)">
+                                            <span style="padding-left: 5px;"><button onclick="btnMinus()" style=" width: 30px; background-color: transparent;
+                                                    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67,
+                                                    0.15) 0px 1px 3px 1px; border-radius: 5px;"> -
+                                                </button></span>
                                         </div>
                                         <div style="width:1px;height:455px;background:#ffa500;position:absolute;z-index:2;top:30px;left:
                                             50%;">
@@ -960,7 +968,13 @@
         //Mỗi đoạn thước dài 1000mm
         var rulerLength = 1000; //Số đo 1 đoạn thước (mm)
         var trimStart = 0; //Số đo đầu của thước (mm)
-        var trimEnd = 1000; //Số đo cuối của thước (mm)
+        var trimEnd = 1000; //Số đo cuối của thước (mm)ư
+        let widthMain = 880
+        window.addEventListener("resize", resizeWindow)
+
+        function resizeWindow() {
+            return widthMain = $("#main").width()
+        }
 
         var myScroll;
 
@@ -1037,22 +1051,18 @@
                         $('#pullLeft .pullLeftLabel').html(
                             'Kéo qua trái tải thêm...');
                     }
-                    $('#sodoLoban').html(Math.round((-this.x + 44 * 10) / 100,
-                        2) + ' cm').css({
-                        'left': $('.container-thuoc-lo-ban').outerWidth(
-                                true) / 2 -
-                            $('#sodoLoban')
-                            .outerWidth(true) / 2
-                    });
+                    $('#inputValue').val(Math.round((-this.x + widthMain / 2) / 100, 2))
                 },
                 onScrollMove: function () {
-                    $('#sodoLoban').html(Math.round((-this.x + 44 * 10) / 100,
-                        2) + ' cm').css({
-                        'left': $('.container-thuoc-lo-ban').outerWidth(
-                                true) / 2 -
-                            $('#sodoLoban')
-                            .outerWidth(true) / 2
-                    });
+                    // $('#sodoLoban').html(Math.round((-this.x + 44 * 10) / 100,
+                    //     2) + ' cm').css({
+                    //     'left': $('.container-thuoc-lo-ban').outerWidth(
+                    //             true) / 2 -
+                    //         $('#sodoLoban')
+                    //         .outerWidth(true) / 2
+                    // });
+
+                    $('#inputValue').val(Math.round((-this.x + widthMain / 2) / 100, 2))
                 },
                 onScrollEnd: function () {
                     myScroll.refresh();
@@ -1083,13 +1093,7 @@
                         pullLeftAction
                             (); // Execute custom function (ajax call?)
                     }
-                    $('#sodoLoban').html(Math.round((-this.x + 44 * 10) / 100,
-                        2) + ' cm').css({
-                        'left': $('.container-thuoc-lo-ban').outerWidth(
-                                true) / 2 -
-                            $('#sodoLoban')
-                            .outerWidth(true) / 2
-                    });
+                    $('#inputValue').val(Math.round((-this.x + widthMain / 2) / 100, 2))
                 },
             });
 
@@ -1108,10 +1112,16 @@
             });
         }
 
+        function handleTranslate(result) {
+            document.getElementById("scroller").style.transform = `translate(${result}px, 0px) scale(1) translateZ(0px)`
+        }
+
         function scrollToValue(event) {
+
             console.log(event.target.value);
+
             var value = event.target.value
-            var result = -100 * value + 440
+            var result = -100 * value + widthMain / 2
             var loop = value / 100
             if (value > 0 && value <= 500) {
                 document.getElementById("scroller").style.transitionDuration = "2000ms"
@@ -1121,18 +1131,38 @@
                 document.getElementById("scroller").style.transitionDuration = "4000ms"
             } else if (value > 3000) {
                 document.getElementById("scroller").style.transitionDuration = "5000ms"
+            } else if (value > 4000) {
+                document.getElementById("scroller").style.transitionDuration = "6000ms"
             }
             for (var i = 0; i < (Math.round(loop, 0)); i++) {
                 pullLeftAction()
             }
-            $('#sodoLoban').html(Math.round((-result + 44 * 10) / 100,
-                2) + ' cm').css({
-                'left': $('.container-thuoc-lo-ban').outerWidth(
-                        true) / 2 -
-                    $('#sodoLoban')
-                    .outerWidth(true) / 2
-            });
-            document.getElementById("scroller").style.transform = `translate(${result}px, 0px) scale(1) translateZ(0px)`
+            $('#inputValue').val(value)
+            handleTranslate(result)
+
+        }
+
+        function btnPlus() {
+            let value = $('#inputValue').val()
+            let handleValue = Math.round(++value, 2)
+            $('#inputValue').val(handleValue)
+            var result = -100 * value + widthMain / 2
+            document.getElementById("scroller").style.transitionDuration = "500ms"
+            handleTranslate(result)
+        }
+
+        function btnMinus() {
+            let value = $('#inputValue').val()
+            if (value <= 0.4) {
+                return
+            } else {
+                let handleValue = Math.round(--value, 2)
+                $('#inputValue').val(handleValue)
+                var result = -100 * handleValue + widthMain / 2
+                document.getElementById("scroller").style.transitionDuration = "500ms"
+                handleTranslate(result)
+
+            }
 
         }
 
