@@ -193,8 +193,8 @@
                                                     0.15) 0px 1px 3px 1px; border-radius: 5px; "> +
                                                 </button></span>
                                             <input style="width: 80px; border: 2px solid orange; color: red;
-                                                text-align: center;" id="inputValue" value="4.4"
-                                                onchange="scrollToValue(event)">
+                                                text-align: center;" id="inputValue" value="4.4" type="text"
+                                                inputmode="decimal" pattern="[0-9,\.]*" onchange="scrollToValue(event)">
                                             <span style="padding-left: 5px;"><button onclick="btnMinus()" style=" width: 30px; background-color: transparent;
                                                     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67,
                                                     0.15) 0px 1px 3px 1px; border-radius: 5px;"> -
@@ -1117,29 +1117,34 @@
         }
 
         function scrollToValue(event) {
+            debugger
 
-            console.log(event.target.value);
-
+            let regex = /^\d*(\.\d+)?$/
+            console.log(regex.test(value))
             var value = event.target.value
-            var result = -100 * value + widthMain / 2
-            var loop = value / 100
-            if (value > 0 && value <= 500) {
-                document.getElementById("scroller").style.transitionDuration = "2000ms"
-            } else if (value > 500 && value <= 1500) {
-                document.getElementById("scroller").style.transitionDuration = "3000ms"
-            } else if (value > 1500 && value <= 3000) {
-                document.getElementById("scroller").style.transitionDuration = "4000ms"
-            } else if (value > 3000) {
-                document.getElementById("scroller").style.transitionDuration = "5000ms"
-            } else if (value > 4000) {
-                document.getElementById("scroller").style.transitionDuration = "6000ms"
+            if (regex.test(value)) {
+                var result = -100 * value + widthMain / 2
+                var loop = value / 100
+                if (value > 0 && value <= 500) {
+                    document.getElementById("scroller").style.transitionDuration = "2000ms"
+                } else if (value > 500 && value <= 1500) {
+                    document.getElementById("scroller").style.transitionDuration = "3000ms"
+                } else if (value > 1500 && value <= 3000) {
+                    document.getElementById("scroller").style.transitionDuration = "4000ms"
+                } else if (value > 3000) {
+                    document.getElementById("scroller").style.transitionDuration = "5000ms"
+                } else if (value > 4000) {
+                    document.getElementById("scroller").style.transitionDuration = "6000ms"
+                }
+                for (var i = 0; i < (Math.round(loop, 0)); i++) {
+                    pullLeftAction()
+                }
+                $('#inputValue').val(value)
+                handleTranslate(result)
+            } else {
+                $('#inputValue').val("4.4")
+                handleTranslate(4.4)
             }
-            for (var i = 0; i < (Math.round(loop, 0)); i++) {
-                pullLeftAction()
-            }
-            $('#inputValue').val(value)
-            handleTranslate(result)
-
         }
 
         function btnPlus() {
